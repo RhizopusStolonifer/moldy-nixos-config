@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./disko.__shell.nix
+    ./disko.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -19,7 +19,7 @@
   nixpkgs.config.allowUnfree = true;
 
   users.users.myco = {
-    inNormalUser = true;
+    isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "changeme";
   };

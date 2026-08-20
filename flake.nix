@@ -12,7 +12,7 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        .hosts/fw16
+        hosts/fw16
         disko.nixosModules.disko
       ];
     };
