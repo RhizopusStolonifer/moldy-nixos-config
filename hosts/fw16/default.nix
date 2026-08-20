@@ -19,7 +19,7 @@
   nixpkgs.config.allowUnfree = true;
 
   users.users.myco = {
-    inNormalUser = true;
+    isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "changeme";
   };
