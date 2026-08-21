@@ -16,7 +16,7 @@
 
       fw16 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs };
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/fw16
           disko.nixosModules.disko
@@ -31,7 +31,7 @@
 
       mycorrhiza = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs };
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/mycorrhiza
           disko.nixosModules.disko
