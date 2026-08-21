@@ -4,7 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ./disko.nix
+    ../../modules/common.nix
   ];
 
-  networking.hostName = "fw16";
+  networking.hostName = "mycorrhiza";
 }

@@ -6,25 +6,43 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
-      url = "github:nix-community/home-mananger";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = { self, nixpkgs, disko, home-manager, ... }@inputs: {
-    nixosConfigurations.fw16 = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        hosts/fw16
-        disko.nixosModules.disko
-        home-manager.nixosModules.default
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.myco = import ../../home/myco
-        }
-      ];
+    nixosConfigurations = {
+
+      fw16 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs };
+        modules = [
+          ./hosts/fw16
+          disko.nixosModules.disko
+          home-manager.nixosModules.default
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.myco = import ../../home/myco;
+          }
+        ];
+      };
+
+      mycorrhiza = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs };
+        modules = [
+          ./hosts/mycorrhiza
+          disko.nixosModules.disko
+          home-manager.nixosModules.default
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.myco = import ../../home/myco;
+          }
+        ];
+      };
+
     };
-  };
 }
