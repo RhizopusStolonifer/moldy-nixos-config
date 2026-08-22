@@ -30,7 +30,6 @@
     clean.extraArgs = "--keep-since 7d --keep 5";
   };
   services.openssh.enable = true;
-  programs.zsh.enable = true;
   services.tailscale.enable = true;
   services.syncthing = { enable = true; user = "myco"; };
   programs.steam.enable = true;

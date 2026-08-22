@@ -10,4 +10,6 @@
     doomLocalDir = "~/.local/share/nix-doom";
     emacs = pkgs.emacs-pgtk;
   };
+
+  home.stateVersion = "26.05";
 }
