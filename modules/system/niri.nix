@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.niri.homeModules.niri ];
+  imports = [ inputs.niri.nixosModules.niri ];
   programs.niri.enable = true;
 
   services.greetd = {
