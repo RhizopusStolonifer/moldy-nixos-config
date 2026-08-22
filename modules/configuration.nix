@@ -1,7 +1,5 @@
 { pkgs, inputs, ... }:
 {
-  imports = [ inputs.niri.nixosModules.niri ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
