@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
-    ./disko.nix
+#    ./hardware-configuration.nix
+#    ./disko.nix
     ./configuration.nix
     ../../modules/common.nix
     ../../modules/system
