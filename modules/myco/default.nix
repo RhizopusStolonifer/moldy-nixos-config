@@ -2,9 +2,8 @@
 
 {
   imports = [
-    ./zsh
-    ./doom
-    ./niri
-    ./ghostty
+    ./zsh/zsh.nix
+    ./niri/niri.nix
+    ./ghostty/ghostty.nix
   ];
 }
