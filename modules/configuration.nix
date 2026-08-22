@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 {
-  imports = [ inputs.nix-doom-emacs-unstraightened.homeModule inputs.niri.nixosModules.niri ];
+  imports = [ inputs.niri.nixosModules.niri ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -32,14 +32,7 @@
   services.openssh.enable = true;
   # niri
   programs.niri.enable = true;
-  # doom emacs
-  programs.doom-emacs = {
-    enable = true;
-    doomDir = ./myco/doom;
-    doomLocalDir = "~/.local/share/nix-doom";
-    emacs = pkgs.emacs-pgtk;
-  };
-  programs.zsh.enable = true;
+    programs.zsh.enable = true;
   services.tailscale.enable = true;
   services.syncthing = { enable = true; user = "myco"; };
   programs.steam.enable = true;
