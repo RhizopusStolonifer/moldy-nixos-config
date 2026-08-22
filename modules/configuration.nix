@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  imports = [ inputs.nix-doom-emacs-unstraightened.homeModule inputs.niri.nixosModules.niri ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -29,10 +31,8 @@
   };
   services.openssh.enable = true;
   # niri
-  imports = [ inputs.niri.nixosModules.niri ];
   programs.niri.enable = true;
   # doom emacs
-  imports = [ inputs.nix-doom-emacs-unstraightened.homeModule ];
   programs.doom-emacs = {
     enable = true;
     doomDir = ./myco/doom;
