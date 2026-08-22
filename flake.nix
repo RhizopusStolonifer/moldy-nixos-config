@@ -25,6 +25,9 @@
       fw12 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
+        nixpkgs.overlays = [
+          {final: prev: { libdisplay-info_0_2 = prev.libdisplay-info; }}
+        ];
         modules = [
           ./hosts/fw12
           disko.nixosModules.disko
