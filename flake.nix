@@ -9,22 +9,27 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    inputs.niri.url = "github:sodiboo/niri-flake";
+    inputs.niri.inputs.nixpkgs.follows = "nixpkgs";
+    inputs.nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
+    inputs.nix-doom-emacs-unstraightened.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, disko, home-manager, ... }@inputs: {
     nixosConfigurations = {
 
-      fw16 = nixpkgs.lib.nixosSystem {
+      fw12 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/fw16
+          ./hosts/fw12
           disko.nixosModules.disko
           home-manager.nixosModules.default
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.myco = import ../../home/myco;
+            home-manager.users.myco = import ./modules/myco/fw12.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
       };
@@ -39,7 +44,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.myco = import ../../home/myco;
+            home-manager.users.myco = import ./modules/myco/mycorrhiza.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
       };

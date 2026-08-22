@@ -3,6 +3,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  zramSwap.enable = true;
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Vancouver";
@@ -14,11 +16,34 @@
   users.users.myco = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    initialPassword = "changeme";
+    initialPassword = "changeme";   # run passwd myco on reinstall
   };
 
-  environment.systemPackages = with pkgs; [git vim];
+  environment.systemPackages = with pkgs; [ git vim nh ];
+  # nh
+  programs.nh = {
+    enable = true;
+    flake = "/etc/nixos";
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 7d --keep 5"
+  }
   services.openssh.enable = true;
+  # niri
+  imports = [ inputs.niri.nixosModules.niri ];
+  programs.niri.enable = true;
+  # doom emacs
+  imports = [ inputs.nix-doom-emacs-unstraightened.homeModule ];
+  programs.doom-emacs = {
+    enable = true;
+    doomDir = ./myco/doom;
+    doomLocalDir = "~/.local/share/nix-doom";
+    emacs = pkgs.emacs-pgtk;
+  };
+  programs.zsh.enable = true;
+  services.tailscale.enable = true;
+  services.syncthing = { enable = true; user = "myco"; };
+  programs.steam.enable = true;
+
 
   system.stateVersion = "26.05";
 
