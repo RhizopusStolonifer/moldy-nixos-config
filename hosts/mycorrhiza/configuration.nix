@@ -1,5 +1,7 @@
 { ... }:
 {
+  imports = [ ./default.nix ];
+
   networking.hostName = "mycorrhiza";
 
   xdg.configFile."niri/dms/binds.kdl".source = ../../modules/myco/niri/mycorrhiza_binds.kdl;
