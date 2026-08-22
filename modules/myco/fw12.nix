@@ -3,7 +3,6 @@
 {
   imports = [ inputs.nix-doom-emacs-unstraightened.homeModule ];
 
-  # doom emacs
   programs.doom-emacs = {
     enable = true;
     doomDir = ./doom;
