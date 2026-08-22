@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../modules/configuration.nix
+  #  ../../modules/configuration.nix
     ../../modules/system
     ../../modules/myco
     ./hardware-configuration.nix
