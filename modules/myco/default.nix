@@ -5,6 +5,5 @@
     ./zsh/zsh.nix
     ./niri/niri.nix
     ./ghostty/ghostty.nix
-    ./configuration.nix
   ];
 }
