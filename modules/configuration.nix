@@ -25,8 +25,8 @@
     enable = true;
     flake = "/etc/nixos";
     clean.enable = true;
-    clean.extraArgs = "--keep-since 7d --keep 5"
-  }
+    clean.extraArgs = "--keep-since 7d --keep 5";
+  };
   services.openssh.enable = true;
   # niri
   imports = [ inputs.niri.nixosModules.niri ];
