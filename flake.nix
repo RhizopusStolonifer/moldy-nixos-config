@@ -26,7 +26,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         nixpkgs.overlays = [
-          {final: prev: { libdisplay-info_0_2 = prev.libdisplay-info; }}
+          (final: prev: { libdisplay-info_0_2 = prev.libdisplay-info; })
         ];
         modules = [
           ./hosts/fw12
