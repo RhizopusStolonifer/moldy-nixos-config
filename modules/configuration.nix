@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [ inputs.nix-doom-emacs-unstraightened.homeModule inputs.niri.nixosModules.niri ];
 
