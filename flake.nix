@@ -9,10 +9,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    inputs.niri.url = "github:sodiboo/niri-flake";
-    inputs.niri.inputs.nixpkgs.follows = "nixpkgs";
-    inputs.nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
-    inputs.nix-doom-emacs-unstraightened.inputs.nixpkgs.follows = "nixpkgs";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
   };
 
   outputs = { self, nixpkgs, disko, home-manager, ... }@inputs: {
