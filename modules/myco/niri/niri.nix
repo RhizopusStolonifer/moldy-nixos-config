@@ -10,7 +10,6 @@
   xdg.configFile."niri/dms/outputs.kdl".source = ./dms/outputs.kdl;
   xdg.configFile."niri/dms/cursor.kdl".source = ./dms/cursor.kdl;
   xdg.configFile."niri/dms/windowrules.kdl".source = ./dms/windowrules.kdl;
-  xdg.configFile."niri/dms/outputs.kdl".source = ./dms/outputs.kdl;
   xdg.configFile."niri/dms/wpblur.kdl".source = ./dms/wpblur.kdl;
   xdg.configFile."niri/dms/fw12_binds.kdl".source = ./fw12_binds.kdl;
   xdg.configFile."niri/dms/mycorrhiza_binds.kdl".source = ./mycorrhiza_binds.kdl;
