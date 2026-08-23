@@ -1,7 +1,10 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.nix-doom-emacs-unstraightened.homeModule ];
+  imports = [
+    ./default.nix
+    inputs.nix-doom-emacs-unstraightened.homeModule
+  ];
 
   home.stateVersion = "26.05";
 
