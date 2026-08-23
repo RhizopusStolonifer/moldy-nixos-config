@@ -1,6 +1,5 @@
 { inputs, ... }:
 {
-  programs.niri.enable = true;
   programs.niri.config = builtins.readFile ./config.kdl;
 
   xdg.configFile."niri/dms/colors.kdl".source = ./dms/colors.kdl;
