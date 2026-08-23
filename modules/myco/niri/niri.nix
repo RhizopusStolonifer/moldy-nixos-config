@@ -1,5 +1,6 @@
 { inputs, ... }:
 {
+  programs.niri.package = inputs.niri.packages.${pkgs.system}.niri-stable;
   imports = [ inputs.niri.homeModules.niri ];
   programs.niri.enable = true;
   programs.niri.config = builtins.readFile ./config.kdl;
