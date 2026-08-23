@@ -14,6 +14,7 @@
     ./services.nix
     ./steam.nix
     ./system.nix
+    ./tailscale.nix
     ./user.nix
     ./wayland.nix
     ./xserver.nix
