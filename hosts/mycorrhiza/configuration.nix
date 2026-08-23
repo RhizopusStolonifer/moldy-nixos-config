@@ -4,8 +4,6 @@
 
   networking.hostName = "mycorrhiza";
 
-  xdg.configFile."niri/dms/binds.kdl".source = ../../modules/myco/niri/mycorrhiza_binds.kdl;
-
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
