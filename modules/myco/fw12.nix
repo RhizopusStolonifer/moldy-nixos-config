@@ -3,12 +3,12 @@
 {
   imports = [ inputs.nix-doom-emacs-unstraightened.homeModule ];
 
+  home.stateVersion = "26.05";
+
   programs.doom-emacs = {
     enable = true;
     doomDir = ./doom;
-    doomLocalDir = "~/.local/share/nix-doom";
+    doomLocalDir = "${config.home.homeDirectory}/.local/share/nix-doom";
     emacs = pkgs.emacs-pgtk;
   };
-
-  home.stateVersion = "26.05";
 }
