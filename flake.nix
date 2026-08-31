@@ -1,28 +1,16 @@
 {
-  description = "Moldy NixOS config";
+  description = "Moldy NixOS Config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    }
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    maple-mono = {
-      url = "github:subframe7536/maple-font?ref=v7.8";
-      flake = false;
-    };
   };
 
-
-  outputs =
-    { nixpkgs, self, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs: 
     let
       username = "myco";
       system = "x86_64-linux";
@@ -34,14 +22,6 @@
     in
     {
       nixosConfigurations = {
-        mycorrhiza = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/mycorrhiza ];
-          specialArgs = {
-            host = "mycorrhiza";
-            inherit self inputs username;
-          };
-        };
         fw12 = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/fw12 ];
