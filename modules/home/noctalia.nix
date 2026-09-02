@@ -1,11 +1,13 @@
-{ pkgs, inputs, username, ...}:
+{ pkgs, inputs, ...}:
 {
-  imports = [ inputs.noctalia.homeModules.default ];
+  home-manager.users.myco = {
+    imports = [ inputs.noctalia.homeModules.default ];
 
-  programs.noctalia = {
-    enable = true;
-    settings = {
+    programs.noctalia = {
+      enable = true;
+      settings = {
 
+      };
     };
   };
 }

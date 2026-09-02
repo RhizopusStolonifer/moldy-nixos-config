@@ -53,6 +53,7 @@
         if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
+        typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet;
       '')
       (lib.mkOrder 1500 ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

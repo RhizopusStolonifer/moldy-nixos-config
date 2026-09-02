@@ -8,5 +8,8 @@
     ./fonts.nix
     ./programs.nix
     ./nixpkgs.nix
+    ./wayland.nix
+    ./steam.nix
+    ./pipewire.nix
   ];
 }
