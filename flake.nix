@@ -13,6 +13,11 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    maple-mono = {
+      url = "github:subframe7536/maple-font";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
