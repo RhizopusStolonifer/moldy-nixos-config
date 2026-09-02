@@ -5,11 +5,13 @@
   };
   systemd.user.services.niri.enableDefaultPath = false;
 
-  xdg-portal = {
+  xdg.portal = {
     enable = true;
 
     config = {
       common.default = [ "gtk" ];
     };
   };
+
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }
