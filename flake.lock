@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "maple-mono": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787197129,
+        "narHash": "sha256-iRxgasGb5vQiJL5kAIpScv4HSPeKs/gyDuJ29Ueo/n4=",
+        "owner": "subframe7536",
+        "repo": "maple-font",
+        "rev": "c08fda97fef73d68c1755219852150770f6e6578",
+        "type": "github"
+      },
+      "original": {
+        "owner": "subframe7536",
+        "repo": "maple-font",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1788039129,
@@ -59,6 +75,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "maple-mono": "maple-mono",
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia"
       }
