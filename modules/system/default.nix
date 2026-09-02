@@ -7,5 +7,6 @@
     ./network.nix
     ./fonts.nix
     ./programs.nix
+    ./nixpkgs.nix
   ];
 }
