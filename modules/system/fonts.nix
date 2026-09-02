@@ -1,7 +1,7 @@
 { pkgs, ...}:
 {
   fonts = {
-    fontConfig = {
+    fontconfig = {
       enable = true;
 
       defaultFonts = {

@@ -2,7 +2,7 @@
 {
   networking = {
     hostName = "${host}";
-    networkManager.enable = true;
+    networkmanager.enable = true;
 
     firewall = {
       enable = true;

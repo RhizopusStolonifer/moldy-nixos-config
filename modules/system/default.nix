@@ -6,5 +6,6 @@
     ./bootloader.nix
     ./network.nix
     ./fonts.nix
+    ./programs.nix
   ];
 }

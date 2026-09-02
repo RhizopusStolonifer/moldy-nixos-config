@@ -1,4 +1,4 @@
-{ pkgs, inputs, ...}:
+{ pkgs, inputs, username, ...}:
 {
   home-manager-users.${username} = {
     imports = [ inputs.noctalia.homeModules.default ];
