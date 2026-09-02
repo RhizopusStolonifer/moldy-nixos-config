@@ -22,6 +22,7 @@
     in
     {
       nixosConfigurations = {
+
         fw12 = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/fw12 ];
@@ -30,6 +31,15 @@
             inherit self inputs username;
           };
         };
+	mycorrhiza = nixpkgs.lib.nixosSystem {
+	  inherit system;
+	  modules = [ ./hosts/mycorrhiza ];
+	  specialArgs = {
+	    host = "mycorrhiza";
+	    inherit self inputs username;
+	  };
+	};
+
       };
     };
 }
