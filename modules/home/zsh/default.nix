@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
 
     autosuggestion.enable = true;
     historySubstringSearch.enable = true;
-    fastsyntaxHighlighting.enable = true;
+    fastSyntaxHighlighting.enable = true;
 
     shellAliases = {
       cat = "echo use bat";
@@ -38,7 +38,7 @@
       }
       {
         name = "zsh-completions";
-        src = pkgs.zsh-completions
+        src = pkgs.zsh-completions;
       }
       {
         name = "zsh-autopair";
@@ -51,7 +51,7 @@
       # p10k instant prompt
       (lib.mkOrder 500 ''
         if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''$(%):-%n}.zsh
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
       '')
       (lib.mkOrder 1500 ''
@@ -71,7 +71,7 @@
     VISUAL = "emacs";
   };
 
-  home.sessionPath = [ "${config.home.homeDirectory}/.config/emacs/bin ];
+  home.sessionPath = [ "${config.home.homeDirectory}/.config/emacs/bin" ];
 
   home.file.".p10k.zsh".source = ./p10k.zsh;
 }
