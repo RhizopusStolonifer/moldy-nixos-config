@@ -27,7 +27,7 @@
     fluxer.url = "github:Hy4ri/fluxer-flake";
 
     doom-emacs = {
-      url = "github:doomemacs/doomemacs";
+      url = "git+https://github.com/doomemacs/core.git?submodules=1&shallow=1";
       flake = false;
     };
   };
