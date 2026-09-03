@@ -12,7 +12,7 @@
   fi
 
   if [ -x "${config.home.homeDirectory}/.config/emacs/bin/doom" ]; then
-    $DRY_RUN_CMD "${config.home.homeDirectory}/.config/emacs/bin/doom" sync || true
+    $DRY_RUN_CMD "${config.home.homeDirectory}/.config/emacs/bin/doom" sync -e || true
   fi
 '';
 
