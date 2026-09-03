@@ -25,6 +25,11 @@
     };
 
     fluxer.url = "github:Hy4ri/fluxer-flake";
+
+    doom-emacs = {
+      url = "github:doomemacs/doomemacs";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 

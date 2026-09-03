@@ -6,5 +6,6 @@
     ./bat.nix
     ./packages.nix
     ./yazi.nix
+    ./emacs
   ];
 }

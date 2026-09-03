@@ -25,6 +25,22 @@
     vesktop
 
     prismlauncher
+
+    # emacs
+    gcc
+    cmake libtool
+    sqlite
+    universal-ctags
+    aspell aspellDicts.en
+    languatetool
+    pyright
+    bash-language-server shellcheck shfmt
+    vccode-langservers-extracted
+    marksman
+    lua-language-server
+    texlab texliveMedium
+    ledger
+    (rWrapper.override { packages = with rPackages; [ languageserver ]; })
   ];
 
   services.syncthing = {
