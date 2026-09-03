@@ -6,6 +6,8 @@
 
   environment.systemPackages = with pkgs; [
     smartmontools
-    nur.repos.lonerOrz.fluxer
+    fluxer-canary
   ];
+
+  nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
 }

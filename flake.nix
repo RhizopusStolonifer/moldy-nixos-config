@@ -24,10 +24,7 @@
       flake = false;
     };
 
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    fluxer.url = "github:Hy4ri/fluxer-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
