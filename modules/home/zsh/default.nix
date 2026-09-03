@@ -8,9 +8,24 @@
     fastSyntaxHighlighting.enable = true;
 
     shellAliases = {
-      cat = "echo use bat";
       eza = "eza -lah";
+      execute = "nix run github:thiagokokada/nix-alien --";
     };
+
+    initExtra = ''
+      switch() {
+          if [ -z "$1" ]; then
+              echo "Error: Commit message required."
+              return 1
+          fi
+
+          z ~/moldy-nixos-config && \
+          git add -A && \
+          git commit -m "$1" && \
+          git push && \
+          nh os switch
+      }
+    '';
 
     zsh-abbr = {
       enable = true;
