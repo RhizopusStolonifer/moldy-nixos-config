@@ -5,6 +5,7 @@
   };
   systemd.user.services.niri.enableDefaultPath = false;
 
+  environment.systemPackages = with pkgs; [ xwayland-satellite ];
   xdg.portal = {
     enable = true;
 
