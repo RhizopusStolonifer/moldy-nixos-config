@@ -9,6 +9,12 @@
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
     "/nix".options = [ "compress=zstd" "noatime" ];
+
+    "/mnt/data" = {
+      device = "/dev/disk/by-uuid/6f3f68f8-08ec-4267-b64a-eda4a2664e57";
+      fsType = "ext4";
+      options = [ "defaults" "nofail" ];
+    };
   };
 
   # Select internationalisation properties.
