@@ -11,5 +11,6 @@
     ./wayland.nix
     ./steam.nix
     ./pipewire.nix
+    ./xserver.nix
   ];
 }

@@ -27,4 +27,7 @@
   programs.zsh.enable = true;
 
   nix.settings.allowed-users = [ "${username}" ];
+
+
+  dbus.enable = true;
 }
