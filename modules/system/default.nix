@@ -12,5 +12,6 @@
     ./steam.nix
     ./pipewire.nix
     ./xserver.nix
+    ./dms.nix
   ];
 }
