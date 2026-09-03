@@ -13,6 +13,8 @@
     python3
     jdk
     jdk8
+    maven
+    wine-wayland
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
