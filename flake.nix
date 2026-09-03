@@ -23,6 +23,11 @@
       url = "github:subframe7536/maple-font";
       flake = false;
     };
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
