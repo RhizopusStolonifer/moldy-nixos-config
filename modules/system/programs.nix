@@ -15,7 +15,7 @@
     maven
     wine-wayland
 
-    (python3.withPackages (ps: with ps; [
+    (python3.withPackages (python-pkgs: with python-pkgs; [
       beatifulsoup4 # for dms anime schedule widget
     ]))
   ];
