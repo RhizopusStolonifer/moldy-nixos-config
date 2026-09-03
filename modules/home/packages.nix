@@ -41,6 +41,13 @@
     texlab texliveMedium
     ledger
     (rWrapper.override { packages = with rPackages; [ languageserver ]; })
+    gnumake
+    pandoc
+    nixfmt
+    graphviz
+    black
+    pipenv
+    python3Packages.pytest
   ];
 
   services.syncthing = {

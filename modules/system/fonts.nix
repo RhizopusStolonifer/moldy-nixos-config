@@ -21,6 +21,8 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
 
+      symbola
+
       noto-fonts-color-emoji
 
       inter
