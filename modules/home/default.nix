@@ -5,5 +5,6 @@
     ./zsh
     ./bat.nix
     ./packages.nix
+    ./yazi.nix
   ];
 }
