@@ -3,7 +3,7 @@
   imports = [
     ./git.nix
     ./zsh
-    ./noctalia.nix
+    ./dms.nix
     ./bat.nix
     ./packages.nix
   ];
