@@ -8,6 +8,7 @@
     smartmontools
     fluxer-canary
     transmission_4-gtk
+    icu
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
