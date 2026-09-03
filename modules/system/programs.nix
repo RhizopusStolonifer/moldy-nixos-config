@@ -9,6 +9,7 @@
     fluxer-canary
     transmission_4-gtk
     icu
+    openssl
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
