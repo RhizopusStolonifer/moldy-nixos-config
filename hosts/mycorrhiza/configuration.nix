@@ -48,12 +48,7 @@
   services.openssh.enable = true;
 
   services.tailscale.enable = true;
-  services.syncthing = {
-    enable = true;
-    settings.gui.user = "myco";
-    openDefaultPorts = true;
-    guiAddress = "0.0.0.0:8384";
-  };
+  
   services.greetd = {
     enable = true;
     settings = {

@@ -26,4 +26,11 @@
 
     prismlauncher
   ];
+
+  services.syncthing = {
+    enable = true;
+    settings.gui.user = "myco";
+    openDefaultPorts = true;
+    guiAddress = "0.0.0.0:8384";
+  };
 }
