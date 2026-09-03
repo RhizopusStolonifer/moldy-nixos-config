@@ -14,9 +14,9 @@
     jdk
     maven
     wine-wayland
+    python314Packages.beautifulsoup4 # for dms anime schedule widget
 
     (python3.withPackages (python-pkgs: with python-pkgs; [
-      beautifulsoup4 # for dms anime schedule widget
     ]))
   ];
 
