@@ -35,7 +35,7 @@
     languagetool
     pyright
     bash-language-server shellcheck shfmt
-    vccode-langservers-extracted
+    vscode-langservers-extracted
     marksman
     lua-language-server
     texlab texliveMedium
