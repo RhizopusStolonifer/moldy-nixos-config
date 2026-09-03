@@ -7,7 +7,7 @@
 
   home.activation.installDoomEmacs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ ! -d "${config.home.homeDirectory}/.config/emacs" ]; then
-      $DRY_RUN_CMD cp -r ${inputs.doomemacs} "${config.home.homeDirectory}/.config/emacs"
+      $DRY_RUN_CMD cp -r ${inputs.doom-emacs} "${config.home.homeDirectory}/.config/emacs"
       $DRY_RUN_CMD chmod -R u+w "${config.home.homeDirectory}/.config/emacs"
     fi
   '';

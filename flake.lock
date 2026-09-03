@@ -42,6 +42,22 @@
         "type": "github"
       }
     },
+    "doom-emacs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788398091,
+        "narHash": "sha256-d2kOnyEoCa2BzM3UplRA8+prHXrHZSSpvhvJHSPiBmM=",
+        "owner": "doomemacs",
+        "repo": "doomemacs",
+        "rev": "bd38d60b0179dea62cae63ea2cccf376ef65f11f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "doomemacs",
+        "repo": "doomemacs",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -148,6 +164,7 @@
       "inputs": {
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
+        "doom-emacs": "doom-emacs",
         "fluxer": "fluxer",
         "home-manager": "home-manager",
         "maple-mono": "maple-mono",
