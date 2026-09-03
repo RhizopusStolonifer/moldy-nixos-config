@@ -12,7 +12,7 @@
       execute = "nix run github:thiagokokada/nix-alien --";
     };
 
-    initExtra = ''
+    initContent = ''
       switch() {
           if [ -z "$1" ]; then
               echo "Error: Commit message required."
