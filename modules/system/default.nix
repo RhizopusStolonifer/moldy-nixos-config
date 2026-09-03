@@ -13,5 +13,6 @@
     ./pipewire.nix
     ./xserver.nix
     ./dms.nix
+    ./emacs.nix
   ];
 }
