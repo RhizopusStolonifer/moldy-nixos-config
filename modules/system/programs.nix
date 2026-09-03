@@ -16,7 +16,7 @@
     wine-wayland
 
     (python3.withPackages (python-pkgs: with python-pkgs; [
-      beatifulsoup4 # for dms anime schedule widget
+      beautifulsoup4 # for dms anime schedule widget
     ]))
   ];
 
