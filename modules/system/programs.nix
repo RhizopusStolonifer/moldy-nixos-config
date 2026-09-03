@@ -12,7 +12,6 @@
     openssl
     python3
     jdk
-    jdk8
     maven
     wine-wayland
   ];
