@@ -32,7 +32,7 @@
     sqlite
     universal-ctags
     aspell aspellDicts.en
-    languatetool
+    languagetool
     pyright
     bash-language-server shellcheck shfmt
     vccode-langservers-extracted
