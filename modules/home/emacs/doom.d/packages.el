@@ -53,3 +53,5 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+(package! flycheck-ledger)
+(package! evil-ledger)

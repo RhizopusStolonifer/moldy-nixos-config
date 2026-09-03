@@ -152,7 +152,7 @@
        ;;kotlin            ; a better, slicker Java(Script)
        (latex +lsp)        ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
-       (ledger +flycheck +evil)             ; be audit you can be
+       ledger              ; be audit you can be
        flycheck-ledger
        evil-ledger
        (lua +lsp)          ; one-based indices? one-based indices

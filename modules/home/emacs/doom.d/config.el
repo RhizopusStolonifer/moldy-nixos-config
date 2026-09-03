@@ -78,8 +78,11 @@
 
 
 (setq shell-file-name (executable-find "bash"))
-(setq-default vterm-shell "/usr/bin/zsh")
-(setq-default explicit-shell-file-name "/usr/bin/zsh")
+(setq-default vterm-shell (executable-find "zsh"))
+(setq-default explicit-shell-file-name (executable-find "zsh"))
+
+(use-package! evil-ledger
+	      :hook (ledger-mode . evil-ledger-mode))
 
 
 
