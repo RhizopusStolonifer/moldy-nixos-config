@@ -3,6 +3,7 @@
 {
   services.jellyfin = {
     enable = true;
+    user = "myco";
   };
 
   services.navidrome = {
