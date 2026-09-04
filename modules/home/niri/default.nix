@@ -10,9 +10,9 @@
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
   xdg.configFile."niri/dms/binds.kdl".source = ./binds.kdl;
   xdg.configFile."niri/dms/binds-host.kdl".source =
-    if host == "fw12" then
+    if host == "mycorrhiza" then
       ./binds-mycorrhiza.kdl
-    else if host == "mycorrhiza" then
+    else if host == "fw12" then
       ./binds-fw12.kdl
     else
       ./binds.kdl;
