@@ -1,19 +1,29 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-    ];
+  imports = [
+  ];
 
   fileSystems = {
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
-    "/nix".options = [ "compress=zstd" "noatime" ];
+    "/nix".options = [
+      "compress=zstd"
+      "noatime"
+    ];
 
     "/mnt/data" = {
       device = "/dev/disk/by-uuid/6f3f68f8-08ec-4267-b64a-eda4a2664e57";
       fsType = "ext4";
-      options = [ "defaults" "nofail" ];
+      options = [
+        "defaults"
+        "nofail"
+      ];
     };
   };
 
@@ -23,14 +33,21 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nixpkgs.config.allowUnfree = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true;
+  hardware.nvidia.modesetting.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
     floorp-bin
@@ -48,7 +65,7 @@
   services.openssh.enable = true;
 
   services.tailscale.enable = true;
-  
+
   services.greetd = {
     enable = true;
     settings = {
@@ -62,7 +79,7 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
@@ -89,4 +106,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
