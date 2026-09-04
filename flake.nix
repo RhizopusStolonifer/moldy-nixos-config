@@ -62,7 +62,11 @@
         };
         mycorrhiza = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/mycorrhiza ];
+          modules = [
+            ./hosts/mycorrhiza
+            inputs.zapp.nixosModules.default
+            { programs.zapp.enable = true; }
+          ];
           specialArgs = {
             host = "mycorrhiza";
             inherit self inputs username;
