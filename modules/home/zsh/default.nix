@@ -28,8 +28,7 @@
           git add -A && \
           git commit -m "$1" && \
           git push && \
-          nh os switch && \
-          doom upgrade && doom sync
+          nh os switch
       }
     '';
 
