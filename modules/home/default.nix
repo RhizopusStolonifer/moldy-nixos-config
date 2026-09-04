@@ -7,5 +7,6 @@
     ./packages.nix
     ./yazi.nix
     ./emacs
+    ./niri
   ];
 }
