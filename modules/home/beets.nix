@@ -24,15 +24,6 @@
       ];
       acoustid.apikey = "akEcyxTl3K";
     };
-
-    package = pkgs.beets.override {
-      pluginOverrides = {
-        filetote = {
-          enable = true;
-          propagatedBuildInputs = [ pkgs.beetsPackages.filetote ];
-        };
-      };
-    };
   };
 
   home.packages = [ pkgs.chromaprint ];
