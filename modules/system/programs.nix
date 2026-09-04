@@ -16,6 +16,7 @@
     wine-wayland
     python314Packages.beautifulsoup4 # for dms anime schedule widget
     brave
+    lutris
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
