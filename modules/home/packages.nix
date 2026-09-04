@@ -14,7 +14,7 @@
     wl-clipboard
     xdg-utils
     winetricks
-    
+
     nixd
 
     pavucontrol
@@ -28,17 +28,22 @@
 
     # emacs
     gcc
-    cmake libtool
+    cmake
+    libtool
     sqlite
     universal-ctags
-    aspell aspellDicts.en
+    aspell
+    aspellDicts.en
     languagetool
     pyright
-    bash-language-server shellcheck shfmt
+    bash-language-server
+    shellcheck
+    shfmt
     vscode-langservers-extracted
     marksman
     lua-language-server
-    texlab texliveMedium
+    texlab
+    texliveMedium
     ledger
     (rWrapper.override { packages = with rPackages; [ languageserver ]; })
     gnumake
