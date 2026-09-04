@@ -18,6 +18,8 @@
     brave
     lutris
     fzf
+    fd
+    librewolf
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
