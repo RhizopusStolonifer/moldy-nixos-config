@@ -20,6 +20,8 @@
     fzf
     fd
     librewolf
+    protonup-qt
+    proton-vpn-cli
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
