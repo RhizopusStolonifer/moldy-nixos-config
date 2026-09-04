@@ -10,6 +10,7 @@
     enable = true;
     settings = {
       directory = "/mnt/data/music/main_library/";
+      library = "/home/myco/.config/beets/library.db";
       plugins = [
         "fetchart"
         "embedart"
