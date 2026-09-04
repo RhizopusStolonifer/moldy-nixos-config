@@ -14,5 +14,6 @@
     ./xserver.nix
     ./dms.nix
     ./emacs.nix
+    ./security.nix
   ];
 }
