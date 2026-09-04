@@ -8,5 +8,6 @@
     ./yazi.nix
     ./emacs
     ./niri
+    ./beets.nix
   ];
 }
