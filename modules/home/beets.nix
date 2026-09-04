@@ -23,6 +23,7 @@
         "chroma"
       ];
       acoustid.apikey = "akEcyxTl3K";
+      replaygain.backend = "ffmpeg";
     };
   };
 
