@@ -52,10 +52,8 @@
           inherit system;
           modules = [
             ./hosts/fw12
-            zapp.nixosModules.default
-            {
-              programs.zapp.enable = true;
-            }
+            inputs.zapp.nixosModules.default
+            { programs.zapp.enable = true; }
           ];
           specialArgs = {
             host = "fw12";
