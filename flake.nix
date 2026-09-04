@@ -30,8 +30,6 @@
       url = "git+https://github.com/doomemacs/core.git?submodules=1&shallow=1";
       flake = false;
     };
-
-    zapp.url = "github:zsa/zapp";
   };
 
   outputs =
@@ -62,11 +60,7 @@
         };
         mycorrhiza = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [
-            ./hosts/mycorrhiza
-            inputs.zapp.nixosModules.default
-            { programs.zapp.enable = true; }
-          ];
+          modules = [ ./hosts/mycorrhiza ];
           specialArgs = {
             host = "mycorrhiza";
             inherit self inputs username;

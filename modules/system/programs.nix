@@ -22,7 +22,6 @@
     librewolf
     protonup-qt
     proton-vpn-cli
-    zsa-udev-rules
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
