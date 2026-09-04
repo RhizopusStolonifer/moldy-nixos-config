@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.zsh = {
     enable = true;
@@ -23,7 +28,8 @@
           git add -A && \
           git commit -m "$1" && \
           git push && \
-          nh os switch
+          nh os switch && \
+          doom upgrade && doom sync
       }
     '';
 
@@ -78,8 +84,8 @@
   };
 
   programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
+    enable = true;
+    enableZshIntegration = true;
   };
 
   home.sessionVariables = {
