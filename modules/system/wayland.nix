@@ -9,6 +9,8 @@
   xdg.portal = {
     enable = true;
 
+    hardware.graphics.enable = true;
+
     config = {
       common.default = [ "gtk" ];
     };
