@@ -30,9 +30,12 @@
       url = "git+https://github.com/doomemacs/core.git?submodules=1&shallow=1";
       flake = false;
     };
+
+    zapp.url = "github:zsa/zapp";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       username = "myco";
       system = "x86_64-linux";
@@ -47,20 +50,26 @@
 
         fw12 = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/fw12 ];
+          modules = [
+            ./hosts/fw12
+            zapp.nixosModules.default
+            {
+              programs.zapp.enable = true;
+            }
+          ];
           specialArgs = {
             host = "fw12";
             inherit self inputs username;
           };
         };
-	mycorrhiza = nixpkgs.lib.nixosSystem {
-	  inherit system;
-	  modules = [ ./hosts/mycorrhiza ];
-	  specialArgs = {
-	    host = "mycorrhiza";
-	    inherit self inputs username;
-	  };
-	};
+        mycorrhiza = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/mycorrhiza ];
+          specialArgs = {
+            host = "mycorrhiza";
+            inherit self inputs username;
+          };
+        };
 
       };
     };
