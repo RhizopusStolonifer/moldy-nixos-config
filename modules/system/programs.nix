@@ -15,10 +15,13 @@
     maven
     wine-wayland
     python314Packages.beautifulsoup4 # for dms anime schedule widget
+    brave
 
-    (python3.withPackages (python-pkgs: with python-pkgs; [
-      
-    ]))
+    (python3.withPackages (
+      python-pkgs: with python-pkgs; [
+
+      ]
+    ))
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
