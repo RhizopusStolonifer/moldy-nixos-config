@@ -44,8 +44,8 @@
         globalOptions = {
           "Hotkey" = {
             # Keybind to toggle/switch input method layout
-            "TriggerKeys" = "Super+k";
-            "EnumerateForwardKeys" = "Super+k";
+            "TriggerKeys" = "Control+Alt+k";
+            "EnumerateForwardKeys" = "Control+Alt+k";
           };
           "Behavior" = {
             "ActiveByDefault" = "True";
