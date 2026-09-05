@@ -15,5 +15,6 @@
     ./dms.nix
     ./emacs.nix
     ./security.nix
+    ./fcitx5.nix
   ];
 }
