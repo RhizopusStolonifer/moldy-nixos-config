@@ -30,11 +30,6 @@
       url = "git+https://github.com/doomemacs/core.git?submodules=1&shallow=1";
       flake = false;
     };
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -55,7 +50,8 @@
           inherit system;
           modules = [
             ./hosts/fw12
-          #  inputs.disko.nixosModules.disko
+            inputs.zapp.nixosModules.default
+            { programs.zapp.enable = true; }
           ];
           specialArgs = {
             host = "fw12";
@@ -64,10 +60,7 @@
         };
         mycorrhiza = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [
-            ./hosts/mycorrhiza
-          #  inputs.disko.nixosModules.disko
-          ];
+          modules = [ ./hosts/mycorrhiza ];
           specialArgs = {
             host = "mycorrhiza";
             inherit self inputs username;

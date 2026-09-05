@@ -1,13 +1,16 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, pkgs, ... }:
 
 {
-  imports = [
-  ];
+  imports =
+    [
+       ./hardware-configuration.nix
+    ];
+
+  fileSystems = {
+    "/".options = [ "compress=zstd" ];
+    "/home".options = [ "compress=zstd" ];
+    "/nix".options = [ "compress=zstd" "noatime" ];
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -36,10 +39,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.myco = {
@@ -53,7 +53,7 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim
+    vim 
     wget
     git
     floorp-bin
@@ -87,11 +87,11 @@
     };
   };
 
-  systemd.user.services.niri.enableDefaultPath = false;
+  systemd.user.services.niri.enableDefaultPath = false;    
   programs.niri.enable = true;
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.swaylock = { };
+  security.pam.services.swaylock = {};
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 8384 ];
@@ -122,3 +122,4 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
+

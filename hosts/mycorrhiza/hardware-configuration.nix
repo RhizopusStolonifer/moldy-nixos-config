@@ -19,26 +19,16 @@
       options = [ "subvol=root" ];
     };
 
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/fdf68db2-e400-47cf-8fd9-b42cd8277b4a";
-      fsType = "btrfs";
-      options = [ "subvol=nix" ];
-    };
-
-  fileSystems."/boot" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/fdf68db2-e400-47cf-8fd9-b42cd8277b4a";
       fsType = "btrfs";
       options = [ "subvol=home" ];
     };
 
-  fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/6f3f68f8-08ec-4267-b64a-eda4a2664e57";
-      fsType = "ext4";
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/fdf68db2-e400-47cf-8fd9-b42cd8277b4a";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
     };
 
   swapDevices = [ ];
