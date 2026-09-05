@@ -7,7 +7,9 @@ binds {
     // === Application Launchers ===
     Mod+return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+E hotkey-overlay-title="Open Emacs" { spawn "emacs"; }
-    Mod+F hotkey-overlay-title="Open File Manager" { spawn "ghostty" "-e" "yazi"; }
+    Mod+Y hotkey-overlay-title="Open File Manager" { spawn "ghostty" "-e" "yazi"; }
+    Mod+X hotkey-overlay-title="Open Xournal++" { spawn "xournalpp"; }
+    Mod+N hotkey-overlay-title="Open rnote" { spawn "rnote"; }
     Mod+A hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
@@ -23,9 +25,9 @@ binds {
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
-    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
-    }
+    //Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+    //    spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+    //}
     Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
@@ -80,7 +82,7 @@ binds {
 
     // === Window Management ===
     Mod+Q repeat=false { close-window; }
-    //Mod+F { maximize-column; }
+    Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
