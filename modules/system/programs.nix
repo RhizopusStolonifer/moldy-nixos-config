@@ -28,6 +28,8 @@
     yt-dlp
     xournalpp
     rnote
+    songrec
+    libpulse
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
