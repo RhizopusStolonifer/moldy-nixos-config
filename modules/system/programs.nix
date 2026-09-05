@@ -23,6 +23,10 @@
     protonup-qt
     proton-vpn-cli
     ani-cli
+    sed
+    curl
+    yt-dlp
+
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
