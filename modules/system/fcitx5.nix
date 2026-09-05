@@ -11,7 +11,7 @@
     type = "fcitx5";
     fcitx5 = {
       waylandFrontend = true;
-      ignoreUserConfig = true; # Ignore local changes in ~/.config/fcitx5
+      ignoreUserConfig = true;
 
       addons = with pkgs; [
         fcitx5-mozc
@@ -27,27 +27,28 @@
           "Groups/0" = {
             "Name" = "Default";
             "Default Layout" = "us";
-            "DefaultIM" = "keyboard-us";
+            "DefaultIM" = "keyboard-us"; # Forces English as the group default
           };
           "Groups/0/Items/0" = {
             "Name" = "keyboard-us";
-            "Layout" = "";
           };
           "Groups/0/Items/1" = {
             "Name" = "mozc";
-            "Layout" = "";
           };
         };
 
         globalOptions = {
+          "Behavior" = {
+            # False = Start in inactive mode (pure US keyboard layout)
+            "ActiveByDefault" = "False";
+            # Reset input method state to default when switching focused windows
+            "resetStateWhenFocusIn" = "All";
+          };
           "Hotkey" = {
             "TriggerKeys" = "";
           };
           "Hotkey/TriggerKeys" = {
             "0" = "Control+space";
-          };
-          "Behavior" = {
-            "ActiveByDefault" = "True";
           };
         };
       };
