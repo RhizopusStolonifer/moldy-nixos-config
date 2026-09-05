@@ -14,5 +14,4 @@
       enable = true;
     };
   };
-  export XCURSOR_SIZE=12;
 }
