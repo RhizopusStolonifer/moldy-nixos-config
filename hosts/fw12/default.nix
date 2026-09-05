@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./configuration.nix
+  #  ./disko.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -38,7 +39,7 @@
 
   boot = {
     kernelModules = [ "acpi_call" ];
-    extraModulePackages = 
+    extraModulePackages =
       with config.boot.kernelPackages;
       [
         acpi_call
