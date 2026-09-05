@@ -26,6 +26,9 @@
     gnused
     curl
     yt-dlp
+    xournalpp
+    rnote
+    notejot
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
