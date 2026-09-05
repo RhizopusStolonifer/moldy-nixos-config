@@ -11,5 +11,6 @@
     ./beets.nix
     ./notetaking
     ./ghostty
+    ./cursor
   ];
 }

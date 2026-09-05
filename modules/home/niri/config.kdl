@@ -292,6 +292,11 @@ recent-windows {
     }
 }
 
+cursor {
+    xcursor-theme "Kasane Teto"
+    xcursor-size 24
+}
+
 // Include dms files
 include optional=true "dms/colors.kdl"
 include optional=true "dms/layout.kdl"

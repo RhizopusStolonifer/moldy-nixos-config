@@ -15,10 +15,5 @@
       smart-filter.package = smart-filter;
       wl-clipboard.package = wl-clipboard;
     };
-    theme = {
-      flavor = {
-        dark = "dracula";
-      };
-    };
   };
 }

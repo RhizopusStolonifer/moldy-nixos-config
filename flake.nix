@@ -30,6 +30,11 @@
       url = "git+https://github.com/doomemacs/core.git?submodules=1&shallow=1";
       flake = false;
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
