@@ -22,6 +22,7 @@
     librewolf
     protonup-qt
     proton-vpn-cli
+    ani-cli
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
