@@ -42,7 +42,6 @@
         globalOptions = {
           "Hotkey" = {
             "TriggerKeys" = "";
-            #"EnumerateForwardKeys" = "Control+Alt+k";
           };
           "Hotkey/TriggerKeys" = {
             "0" = "Control+space";
