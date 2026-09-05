@@ -301,4 +301,4 @@ include optional=true "dms/binds-host.kdl"
 include optional=true "dms/outputs.kdl"
 include optional=true "dms/cursor.kdl"
 
-include "dms-theme-sync.kdl"
+//include "dms-theme-sync.kdl"
