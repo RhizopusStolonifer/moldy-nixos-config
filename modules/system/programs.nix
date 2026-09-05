@@ -28,7 +28,7 @@
     yt-dlp
     xournalpp
     rnote
-    notejot
+    sticky
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
