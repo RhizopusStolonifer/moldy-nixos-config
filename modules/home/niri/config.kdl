@@ -292,13 +292,6 @@ recent-windows {
     }
 }
 
-
-cursor {
-    xcursor-size 12
-}
-
-
-
 // Include dms files
 include optional=true "dms/colors.kdl"
 include optional=true "dms/layout.kdl"
