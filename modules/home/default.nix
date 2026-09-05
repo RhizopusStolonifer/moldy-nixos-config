@@ -9,5 +9,6 @@
     ./emacs
     ./niri
     ./beets.nix
+    ./fcitx5-config.nix
   ];
 }
