@@ -9,7 +9,7 @@ stdenv.mkDerivation {
   dontBuild = true;
 
   installPhase = ''
-    mkdir -p "$out/share/icons/Kasane Teto"
-    cp -r . "$out/share/icons/Kasane Teto/"
+    mkdir -p "$out/share/icons/teto"
+    cp -r . "$out/share/icons/teto/"
   '';
 }

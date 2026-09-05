@@ -2,7 +2,7 @@
 {
   home.pointerCursor = {
     package = pkgs.teto-cursor;
-    name = "Kasane Teto";
+    name = "teto";
     size = 24;
     gtk.enable = true;
     x11.enable = true;

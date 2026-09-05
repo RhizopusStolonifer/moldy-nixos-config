@@ -293,7 +293,7 @@ recent-windows {
 }
 
 cursor {
-    xcursor-theme "Kasane Teto"
+    xcursor-theme "teto"
     xcursor-size 24
 }
 
