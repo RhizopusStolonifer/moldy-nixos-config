@@ -16,6 +16,26 @@
         "type": "github"
       }
     },
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781152676,
+        "narHash": "sha256-RxWs5ND31KzTG7wvMM+PMfUjyNpmIEr999lqNARaM5o=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "ff8702b4de27f72b4c78573dfb89ec74e36abdf1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
     "dms": {
       "inputs": {
         "dank-qml-common": "dank-qml-common",
@@ -182,6 +202,7 @@
     },
     "root": {
       "inputs": {
+        "disko": "disko",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "doom-emacs": "doom-emacs",
