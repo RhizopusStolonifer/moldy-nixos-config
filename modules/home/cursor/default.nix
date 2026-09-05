@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.pointerCursor = {
+    enable = true;
     package = pkgs.teto-cursor;
     name = "teto";
     size = 24;
