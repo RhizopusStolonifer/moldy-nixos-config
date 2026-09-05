@@ -29,7 +29,7 @@
     xournalpp
     rnote
     songrec
-    libpulse
+    python314Packages.libpulse
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
