@@ -10,5 +10,6 @@
     ./niri
     ./beets.nix
     ./notetaking
+    ./ghostty
   ];
 }
