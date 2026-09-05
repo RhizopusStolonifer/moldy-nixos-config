@@ -293,7 +293,9 @@ recent-windows {
 }
 
 
-xcursor-size 12
+cursor {
+    xcursor-size 12
+}
 
 
 
