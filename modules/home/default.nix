@@ -5,9 +5,10 @@
     ./zsh
     ./bat.nix
     ./packages.nix
-    ./yazi.nix
+    ./yazi
     ./emacs
     ./niri
     ./beets.nix
+    ./notetaking
   ];
 }

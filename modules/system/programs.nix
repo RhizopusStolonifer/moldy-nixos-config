@@ -26,8 +26,6 @@
     gnused
     curl
     yt-dlp
-    xournalpp
-    rnote
     songrec
     python314Packages.libpulse
 
