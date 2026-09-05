@@ -10,6 +10,7 @@
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
+      qt6Packages.fcitx5-with-addons
       fcitx5-mozc
       qt6Packages.fcitx5-configtool
     ];
