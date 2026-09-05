@@ -20,7 +20,6 @@
       ];
 
       settings = {
-        # Configures ~/.config/fcitx5/profile or /etc/xdg/fcitx5/profile
         inputMethod = {
           "GroupOrder" = {
             "0" = "Default";
@@ -40,12 +39,13 @@
           };
         };
 
-        # Configures ~/.config/fcitx5/config or /etc/xdg/fcitx5/config
         globalOptions = {
           "Hotkey" = {
-            # Keybind to toggle/switch input method layout
-            "TriggerKeys" = "Control+Alt+k";
-            "EnumerateForwardKeys" = "Control+Alt+k";
+            "TriggerKeys" = "";
+            #"EnumerateForwardKeys" = "Control+Alt+k";
+          };
+          "Hotkey/TriggerKeys" = {
+            "0" = "Control+space";
           };
           "Behavior" = {
             "ActiveByDefault" = "True";
