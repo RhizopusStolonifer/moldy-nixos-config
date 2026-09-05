@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  host,
   ...
 }:
 {
@@ -17,20 +18,38 @@
       execute = "nix run github:thiagokokada/nix-alien --";
     };
 
-    initExtra = ''
-      switch() {
-          if [ -z "$1" ]; then
-              echo "Error: Commit message required."
-              return 1
-          fi
+    initExtra =
+      if host == "mycorrhiza" then
+        ''
+          switch() {
+              if [ -z "$1" ]; then
+                  echo "Error: Commit message required."
+                  return 1
+              fi
 
-          z ~/moldy-nixos-config && \
-          git add -A && \
-          git commit -m "$1" && \
-          git push && \
-          nh os switch
-      }
-    '';
+              z ~/moldy-nixos-config && \
+              git add -A && \
+              git commit -m "$1" && \
+              git push && \
+              nh os switch
+          }
+        ''
+      else
+        ''
+          bindkey -v
+          switch() {
+              if [ -z "$1" ]; then
+                  echo "Error: Commit message required."
+                  return 1
+              fi
+
+              z ~/moldy-nixos-config && \
+              git add -A && \
+              git commit -m "$1" && \
+              git push && \
+              nh os switch
+          }
+        '';
 
     zsh-abbr = {
       enable = true;
