@@ -35,7 +35,8 @@
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
-
+        numpy
+        scipy
       ]
     ))
   ];
