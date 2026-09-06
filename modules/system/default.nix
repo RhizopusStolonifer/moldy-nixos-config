@@ -17,6 +17,6 @@
     ./security.nix
     ./fcitx5.nix
     ./stylix.nix
-    ./secrets.nix
+    #./secrets.nix
   ];
 }
