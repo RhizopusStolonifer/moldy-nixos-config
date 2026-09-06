@@ -31,7 +31,7 @@
     fastfetch
     hyfetch
     pokeget-rs
-    dracula-icons
+    dracula-icon-theme
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
