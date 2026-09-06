@@ -53,6 +53,11 @@
     black
     pipenv
     python3Packages.pytest
+    zeromq
+    autoconf
+    automake
+    libtool
+    pkg-config
   ];
 
   programs = {
