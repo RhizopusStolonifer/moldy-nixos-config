@@ -100,7 +100,8 @@
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       '')
       (lib.mkOrder 2000 ''
-        bash ${./pokemon.sh}
+        eval "$(pay-respects zsh)"
+          bash ${./pokemon.sh}
       '')
     ];
 
