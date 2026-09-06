@@ -99,7 +99,7 @@
       (lib.mkOrder 1500 ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       '')
-      (lib.mkOrder 2000) ''
+      (lib.mkOrder 2000 ''
         source ${./pokemon.sh}
       '')
     ];
