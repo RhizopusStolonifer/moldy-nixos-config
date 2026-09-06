@@ -37,6 +37,8 @@
       python-pkgs: with python-pkgs; [
         numpy
         scipy
+        sympy
+        matplotlib
       ]
     ))
   ];
