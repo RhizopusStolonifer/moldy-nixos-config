@@ -1,0 +1,12 @@
+keys:
+  - &me        age16373q2exw2rfaazrxtfa0v6s7euy6v843s23z96eglp9zq5z5y0sgfd5sx
+  - &fw12
+  - &mycorrhiza age1s420z457w54dge9a74p0kj5n6edzxf0zz88zh7jln8wgmvp9pe8sj4sxgc
+
+creation_rules:
+  - path_regex: secrets/secrets\.yaml$
+    key_groups:
+      - age:
+          - *me
+          - *fw12
+          - *mycorrhiza
