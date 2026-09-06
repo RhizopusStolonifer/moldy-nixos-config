@@ -26,7 +26,7 @@ POKEMON_LIST=(
 	"meloetta -s"
 )
 # Change with your fetcher
-FETCHER="fastfetch --logo none"
+FETCHER="fastfetch --logo none --pipe false"
 
 FETCHER_HEIGHT=$($FETCHER | wc -l)
 
