@@ -28,6 +28,9 @@
     yt-dlp
     songrec
     python314Packages.libpulse
+    fastfetch
+    hyfetch
+    pokeget-rs
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
