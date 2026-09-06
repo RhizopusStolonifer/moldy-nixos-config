@@ -1,4 +1,10 @@
-{ pkgs, inputs, username, host, ... }:
+{
+  pkgs,
+  inputs,
+  username,
+  host,
+  ...
+}:
 {
   imports = [
     inputs.home-manager.nixosModules.default
@@ -8,6 +14,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs username host; };
+    sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
     users.${username} = {
       imports = [ ../home ];
       home.username = "${username}";
@@ -21,7 +28,11 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "networkmanager" "wheel" "inputs" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "inputs"
+    ];
     shell = pkgs.zsh;
   };
   programs.zsh.enable = true;
