@@ -55,6 +55,13 @@
     python3Packages.pytest
   ];
 
+  programs = {
+    pay-respects = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+  };
+
   services.syncthing = {
     enable = true;
     settings.gui.user = "myco";
