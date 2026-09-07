@@ -85,7 +85,14 @@
 (use-package! evil-ledger
   :hook (ledger-mode . evil-ledger-mode))
 
-(org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
+(use-package org
+  :config
+  (org-babel-do-load-languages
+   'org-babel-do-load-languages
+   '((python . t)
+     (emacs-lisp . t)))
+  (setq org-confirm-babel-evaluate nill)
+  (setq org-babel-python-command "python3"))
 
 ;;(with-eval-after-load 'org-roam
 ;;  (setq org-roam-capture-templates
