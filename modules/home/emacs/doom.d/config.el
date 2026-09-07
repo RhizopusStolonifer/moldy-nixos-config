@@ -82,9 +82,9 @@
 (setq-default explicit-shell-file-name (executable-find "zsh"))
 
 (use-package! evil-ledger
-	      :hook (ledger-mode . evil-ledger-mode))
+  :hook (ledger-mode . evil-ledger-mode))
 
-
+(org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
 
 ;;(with-eval-after-load 'org-roam
 ;;  (setq org-roam-capture-templates
