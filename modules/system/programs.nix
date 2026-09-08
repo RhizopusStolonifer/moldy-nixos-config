@@ -38,6 +38,7 @@
     dracula-icon-theme
     p7zip
     picard
+    songrec
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
