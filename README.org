@@ -12,27 +12,27 @@
 7. sudo mkdir -p mnt
 8. sudo mount /dev/sdX2 /mnt
 9. sudo btrfs subvolume create /mnt/root
-   sudo btrfs subvolume create /mnt/home
-   sudo btrfs subvolume create /mnt/nix
-   sudo umount /mnt
-10. sudo mount -o compress=zstd,subvol=root /dev/sdX2 /mnt
-    sudo mkdir /mnt/{home,nix}
-    sudo mount -o compress=zstd,subvol=home /dev/sdX2 /mnt/home
-    sudo mount -o compress=zstd,noatime,subvol=nix /dev/sdX2 /mnt/nix
-11. sudo nixos-generate-config --root /mnt
-    edit the generated configs if need-be
-    sudo nixos-install
+10. sudo btrfs subvolume create /mnt/home
+11. sudo btrfs subvolume create /mnt/nix
+12. sudo umount /mnt
+13. sudo mount -o compress=zstd,subvol=root /dev/sdX2 /mnt
+14. sudo mkdir /mnt/{home,nix}
+15. sudo mount -o compress=zstd,subvol=home /dev/sdX2 /mnt/home
+16. sudo mount -o compress=zstd,noatime,subvol=nix /dev/sdX2 /mnt/nix
+17. sudo nixos-generate-config --root /mnt
+18. edit the generated configs if need-be
+19. sudo nixos-install
 
 ** Clone and Rebuild
 *** (Me only)
-ssh-keygen -t ed25519, add to codeberg
-git clone git@codeberg.org:RhizopusStolonifer/moldy-nixos-config
+**** ssh-keygen -t ed25519, add to codeberg
+**** git clone git@codeberg.org:RhizopusStolonifer/moldy-nixos-config
 *** not me
-git clone https://codeberg.org/RhizopusStolonifer/moldy-nixos-config
-sudo nixos-rebuild --flake moldy-nixos-config#host
+**** git clone https://codeberg.org/RhizopusStolonifer/moldy-nixos-config
+**** sudo nixos-rebuild --flake moldy-nixos-config#host
 
 ** Post-Install
-run doom sync
-configure dms
+*** run doom sync
+*** configure dms
 
-profit
+*** profit
