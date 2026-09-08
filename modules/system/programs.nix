@@ -6,7 +6,7 @@
   programs.kdeconnect = {
     enable = true;
     package = pkgs.valent;
-  }
+  };
 
   environment.systemPackages = with pkgs; [
     smartmontools
