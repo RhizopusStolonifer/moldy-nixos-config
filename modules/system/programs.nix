@@ -39,6 +39,7 @@
     p7zip
     picard
     songrec
+    puddletag
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
