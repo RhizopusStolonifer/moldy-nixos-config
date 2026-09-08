@@ -1,0 +1,38 @@
+#+title: README
+
+* Install
+
+** Install NixOS
+1. [[https://nixos.org/download/][Get NixOS ISO]]
+2. Write to a USB, or copy to Ventoy
+3. Enter live ISO
+4. lsblk -f, sudo cfdisk /dev/[drive] or printf "label: gpt\n,550M,U\n,,L\n" | sfdisk /dev/sdX
+5. sdX1 = EFI filesystem, sudo mkfs.fat -F 32 /dev/sdX1
+6. sdX2 = Linux filesystem & sudo mkfs.btrfs /dev/sdX2
+7. sudo mkdir -p mnt
+8. sudo mount /dev/sdX2 /mnt
+9. sudo btrfs subvolume create /mnt/root
+   sudo btrfs subvolume create /mnt/home
+   sudo btrfs subvolume create /mnt/nix
+   sudo umount /mnt
+10. sudo mount -o compress=zstd,subvol=root /dev/sdX2 /mnt
+    sudo mkdir /mnt/{home,nix}
+    sudo mount -o compress=zstd,subvol=home /dev/sdX2 /mnt/home
+    sudo mount -o compress=zstd,noatime,subvol=nix /dev/sdX2 /mnt/nix
+11. sudo nixos-generate-config --root /mnt
+    edit the generated configs if need-be
+    sudo nixos-install
+
+** Clone and Rebuild
+*** (Me only)
+ssh-keygen -t ed25519, add to codeberg
+git clone git@codeberg.org:RhizopusStolonifer/moldy-nixos-config
+*** not me
+git clone https://codeberg.org/RhizopusStolonifer/moldy-nixos-config
+sudo nixos-rebuild --flake moldy-nixos-config#host
+
+** Post-Install
+run doom sync
+configure dms
+
+profit
