@@ -36,6 +36,7 @@
     hyfetch
     pokeget-rs
     dracula-icon-theme
+    p7zip
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
