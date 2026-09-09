@@ -30,7 +30,7 @@
       wifi-commander
       niri
       gpu-screen-recorder
-      DMS
+      dms-extension
       process-manager
       fuzzy-files
       systemd
