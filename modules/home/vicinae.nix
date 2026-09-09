@@ -18,7 +18,7 @@
           name = "vicinae-light";
           icon_theme = "default";
         };
-        dark = {
+        dark = lib.mkForce {
           name = "dracula";
           icon_theme = "dracula-icons";
         };
