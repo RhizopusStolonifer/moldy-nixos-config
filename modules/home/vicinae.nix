@@ -30,7 +30,7 @@
       wifi-commander
       niri
       gpu-screen-recorder
-      dms
+      #dms  # doesn't work??
       process-manager
       fuzzy-files
       systemd
