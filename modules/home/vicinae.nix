@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 {
   imports = [ inputs.vicinae.homeManagerModules.default ];
 
@@ -20,7 +25,7 @@
       };
 
       launcher_window = {
-        opacity = 0.5;
+        opacity = lib.mkForce 0.5;
       };
     };
 
