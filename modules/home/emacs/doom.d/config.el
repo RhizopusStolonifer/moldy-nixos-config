@@ -86,6 +86,7 @@
   :hook (ledger-mode . evil-ledger-mode))
 
 (use-package! hledger-mode :mode ("\\.journal\\'" . hledger-mode) :config (setq hledger-jfile "~/sync/finance/ledger.journal"))
+(load! ob-hledger)
 
 (use-package org
   :config
