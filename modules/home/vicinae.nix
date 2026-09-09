@@ -33,7 +33,6 @@
       #dms  # doesn't work??
       process-manager
       fuzzy-files
-      systemd
     ];
   };
 }
