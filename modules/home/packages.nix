@@ -58,6 +58,9 @@
     automake
     libtool
     pkg-config
+    hledger
+    hledger-ui
+    hledger-web
   ];
 
   programs = {
