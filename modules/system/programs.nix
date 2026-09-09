@@ -45,6 +45,7 @@
     nix-search
     feishin
     supersonic
+    rPackages.tidyverse
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [

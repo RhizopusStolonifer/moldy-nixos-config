@@ -86,8 +86,8 @@
   :hook (ledger-mode . evil-ledger-mode))
 
 (use-package! hledger-mode :mode ("\\.journal\\'" . hledger-mode) :config (setq hledger-jfile "~/sync/finance/ledger.journal"))
-;;(load! ob-hledger)
-;;(after! org (add-to-list 'org-capture-templates '("l" "Ledger transaction" plain (file "~/sync/finances/ledger.journal") "\n%(org-read-date) * %^{Payee}\n Expenses:%^{Category} $%^{Amount}\n Liabilities:CIBC:MoldyCredit\n")))
+(load! ob-hledger)
+(after! org (add-to-list 'org-capture-templates '("l" "Ledger transaction" plain (file "~/sync/finances/ledger.journal") "\n%(org-read-date) * %^{Payee}\n Expenses:%^{Category} $%^{Amount}\n Liabilities:CIBC:MoldyCredit\n")))
 
 (use-package org
   :config
