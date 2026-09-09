@@ -14,7 +14,7 @@
     settings = {
       close_on_focus_loss = true;
       theme = {
-        light = {
+        light = lib.mkForce {
           name = "vicinae-light";
           icon_theme = "default";
         };
