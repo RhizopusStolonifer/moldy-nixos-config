@@ -10,9 +10,10 @@ binds {
     Mod+Y hotkey-overlay-title="Open File Manager" { spawn "ghostty" "-e" "yazi"; }
     Mod+X hotkey-overlay-title="Open Xournal++" { spawn "xournalpp"; }
     Mod+N hotkey-overlay-title="Open rnote" { spawn "rnote"; }
-    Mod+A hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
+    Mod+A hotkey-overlay-title="Application Launcher" { spawn "vicinae" "toggle"; }
+    //Mod+A hotkey-overlay-title="Application Launcher" {
+    //    spawn "dms" "ipc" "call" "spotlight" "toggle";
+    //}
     Mod+S hotkey-overlay-title="Open Browser" { spawn "floorp"; }
     Mod+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
