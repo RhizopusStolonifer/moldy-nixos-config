@@ -42,6 +42,7 @@
     puddletag
     umu-launcher
     gpu-screen-recorder
+    nix-search
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
