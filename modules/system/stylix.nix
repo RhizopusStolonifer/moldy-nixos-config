@@ -16,6 +16,7 @@
       #  name = "Maple Mono";
       #};
       monospace = {
+        package = pkgs.kode-mono;
         name = "Kode Mono";
       };
       sansSerif = {
