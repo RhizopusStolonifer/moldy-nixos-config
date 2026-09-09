@@ -102,7 +102,7 @@
       },
       "original": {
         "owner": "AvengeMedia",
-        "ref": "stable",
+        "ref": "v1.6.1",
         "repo": "DankMaterialShell",
         "type": "github"
       }
