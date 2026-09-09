@@ -85,6 +85,8 @@
 (use-package! evil-ledger
   :hook (ledger-mode . evil-ledger-mode))
 
+(use-package! hledger-mode :mode ("\\.journal\\'" . hledger-mode) :config (setq hledger-jfile "~/sync/finance/ledger.journal"))
+
 (use-package org
   :config
   (org-babel-do-load-languages
