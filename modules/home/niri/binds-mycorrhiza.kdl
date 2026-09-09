@@ -7,9 +7,10 @@ binds {
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+Y hotkey-overlay-title="Open File Manager" { spawn "ghostty" "-e" "yazi"; }
-    Mod+R hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
+    Mod+R hotkey-overlay-title="Application Launcher" { spawn "vicinae" "toggle" }
+    //Mod+R hotkey-overlay-title="Application Launcher" {
+    //    spawn "dms" "ipc" "call" "spotlight" "toggle";
+    //}
     Mod+W hotkey-overlay-title="Open Browser" { spawn "floorp"; }
     Mod+D hotkey-overlay-title="Open Emacs" { spawn "emacs"; }
     Alt+Space hotkey-overlay-title="Spotlight Bar" {
