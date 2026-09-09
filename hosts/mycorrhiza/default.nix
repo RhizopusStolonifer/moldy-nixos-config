@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ./configuration.nix
     ../../modules/system
+    ./media.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -15,13 +16,13 @@
 
   services = {
     power-profiles-daemon.enable = true;
-  }; 
+  };
 
   powerManagement.cpuFreqGovernor = "performance";
 
   boot = {
     kernelModules = [ "acpi_call" ];
-    extraModulePackages = 
+    extraModulePackages =
       with config.boot.kernelPackages;
       [
         acpi_call
