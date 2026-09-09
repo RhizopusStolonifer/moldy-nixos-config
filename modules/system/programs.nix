@@ -43,6 +43,8 @@
     umu-launcher
     gpu-screen-recorder
     nix-search
+    feishin
+    supersonic
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
