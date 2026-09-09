@@ -40,6 +40,7 @@
     picard
     songrec
     puddletag
+    umu-launcher
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
