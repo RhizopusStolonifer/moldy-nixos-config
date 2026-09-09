@@ -10,6 +10,7 @@
     enable = true;
 
     settings = {
+      Address = "100.104.239.104";
       MusicFolder = "/mnt/data/music/";
     };
   };
