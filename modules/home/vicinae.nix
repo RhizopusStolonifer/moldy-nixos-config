@@ -22,10 +22,16 @@
           name = "dracula";
           icon_theme = "dracula-icons";
         };
+        font = {
+          normal = {
+            family = "Kode Mono";
+          };
+        };
       };
 
       launcher_window = {
-        opacity = lib.mkForce 0.5;
+        opacity = lib.mkForce 1;
+        compact_mode.enabled = true;
       };
     };
 
