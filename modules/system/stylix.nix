@@ -20,8 +20,8 @@
         name = "Kode Mono";
       };
       sansSerif = {
-        package = pkgs.public-sans;
-        name = "Public Sans";
+        package = pkgs.inter;
+        name = "Inter";
       };
       serif = {
         package = pkgs.noto-fonts;
