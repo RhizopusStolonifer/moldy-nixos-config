@@ -41,6 +41,7 @@
     songrec
     puddletag
     umu-launcher
+    gpu-screen-recorder
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [

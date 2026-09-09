@@ -1,12 +1,15 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
   fonts = {
     fontconfig = {
       enable = true;
 
       defaultFonts = {
-        monospace = [ "Maple Mono" "JetBrainsMono Nerd Font" ];
-        sansSerif = [ "Public Sans" ];
+        monospace = [
+          "Kode Mono"
+          "JetBrainsMono Nerd Font"
+        ];
+        sansSerif = [ "Inter" ];
         serif = [ "Noto Serif" ];
         emoji = [ "Noto Color Emoji" ];
       };
@@ -14,19 +17,17 @@
 
     packages = with pkgs; [
       maple-mono-custom
-
       noto-fonts
       public-sans
-
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
-
       symbola
-
       noto-fonts-color-emoji
-
       inter
       fira-code
+      kode-mono
+      departure-mono
+      inter
     ];
   };
 }
