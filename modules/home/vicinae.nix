@@ -30,7 +30,7 @@
       wifi-commander
       niri
       gpu-screen-recorder
-      dank-material-shell
+      dankmaterialshell
       process-manager
       fuzzy-files
       systemd
