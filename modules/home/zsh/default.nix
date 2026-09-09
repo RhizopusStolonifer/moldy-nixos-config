@@ -91,17 +91,17 @@
     initContent = lib.mkMerge [
       # p10k instant prompt
       (lib.mkOrder 500 ''
+        eval "$(pay-respects zsh)"
+          bash ${./pokemon.sh}
+      '')
+      (lib.mkOrder 1000 ''
         if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
         typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet;
       '')
-      (lib.mkOrder 1500 ''
-        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      '')
       (lib.mkOrder 2000 ''
-        eval "$(pay-respects zsh)"
-          bash ${./pokemon.sh}
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       '')
     ];
 
