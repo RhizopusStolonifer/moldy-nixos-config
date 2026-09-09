@@ -13,6 +13,7 @@ binds {
     //}
     Mod+W hotkey-overlay-title="Open Browser" { spawn "floorp"; }
     Mod+D hotkey-overlay-title="Open Emacs" { spawn "emacs"; }
+    Mod+S hotkey-overlay-title="Open Steam" { spawn "steam-labwc"; }
     Alt+Space hotkey-overlay-title="Spotlight Bar" {
         spawn "dms" "ipc" "call" "spotlight-bar" "toggle";
     }
