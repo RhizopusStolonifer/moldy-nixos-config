@@ -6,7 +6,7 @@
 
       defaultFonts = {
         monospace = [
-          "Kode Mono"
+          "Maple Mono"
           "JetBrainsMono Nerd Font"
         ];
         sansSerif = [ "Inter" ];
