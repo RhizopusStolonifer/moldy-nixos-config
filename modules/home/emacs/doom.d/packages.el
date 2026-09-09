@@ -58,3 +58,4 @@
 (package! envrc)
 ;; :hook (after-init . envrc-global-mode))
 (package! hledger-mode)
+(package! ob-hledger)
