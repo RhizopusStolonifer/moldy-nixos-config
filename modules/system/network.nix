@@ -18,7 +18,7 @@
       ];
       trustedInterfaces = [
         "tailscale0"
-        config.services.tailscale.tailscale0
+        config.services.tailscale.interfaceName
       ];
     };
   };
