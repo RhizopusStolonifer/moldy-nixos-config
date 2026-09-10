@@ -96,7 +96,7 @@
    '((python . t)
      (R . t)
      (emacs-lisp . t)))
-  (setq org-confirm-babel-evaluate nill)
+  (setq org-confirm-babel-evaluate nil)
   (setq org-babel-python-command "python3"))
 
 ;;(with-eval-after-load 'org-roam
