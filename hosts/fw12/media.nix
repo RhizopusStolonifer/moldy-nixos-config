@@ -13,7 +13,7 @@
       password = "@Cq8TNBGh&CFjVArNjP#";
       devices = {
         "mycorrhiza" = {
-          id = "QJUQ2KT-MVUK2Z2-QJLZGAI-JQ245J3-JJW3GZI-KMRIZVE-RLVBFFA-53OXFAA";
+          id = "NZUYUSU-2E24EHV-OC4RH3K-I7AY33O-VXI3LJH-IWA7YRS-A72XJN7-T6LXUA3";
         };
       };
       folders = {
