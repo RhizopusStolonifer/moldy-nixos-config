@@ -14,7 +14,6 @@
     transmission_4-gtk
     icu
     openssl
-    python3
     jdk
     maven
     wine-wayland

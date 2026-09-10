@@ -99,9 +99,12 @@
   (setq org-confirm-babel-evaluate nil)
   (setq org-babel-python-command "python3"))
 
-;;(with-eval-after-load 'org-roam
-;;  (setq org-roam-capture-templates
-;;        i(("d" "default" plain "%?"
-;;           :target (file+head "${slug}.org" "#+title: ${title}\n")
-;;           :unnarrowed t))))
-;;(set-file-template! "\\.org$" :ignore t)
+(after! org-roam
+  (setq org-roam-capture-templates
+        '(("d" "default" plain "%?"
+           :target (file+head "${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+          ("m" "MATH232" plain "%?"
+           :target (file+head "${slug}.org"
+                              "#+title: ${title}\n#+PROPERTY: header-args:python :session math232 :results output\n#+PROPERTY: header-args:R :session math232-R :results output\n")
+           :unnarrowed t))))
