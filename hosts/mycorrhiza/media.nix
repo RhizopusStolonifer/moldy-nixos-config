@@ -22,7 +22,7 @@
       password = "@Cq8TNBGh&CFjVArNjP#";
       devices = {
         "fw12" = {
-          id = "AGEUHWX-52MKJMH-IYGYVQY-DYXMIWD-WMIBMST-5WZB4H7-FTJ4K22-HU67CQH";
+          id = "S72GWPX-PKQVE7Z-R4DABGN-CX2IUSG-DZSZ5X5-BXCLIXN-X7H7RQQ-ZRLLIAN";
         };
       };
       folders = {
