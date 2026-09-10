@@ -45,7 +45,6 @@
     texlab
     texliveMedium
     ledger
-    (rWrapper.override { packages = with rPackages; [ languageserver ]; })
     gnumake
     pandoc
     nixfmt

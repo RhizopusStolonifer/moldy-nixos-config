@@ -45,7 +45,6 @@
     nix-search
     feishin
     supersonic
-    rPackages.tidyverse
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
@@ -55,6 +54,13 @@
         matplotlib
       ]
     ))
+
+    (rWrapper.override {
+      packages = with rPackages; [
+        tidyverse
+        languageserver
+      ];
+    })
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
