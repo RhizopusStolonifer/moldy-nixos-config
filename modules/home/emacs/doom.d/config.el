@@ -94,6 +94,7 @@
   (org-babel-do-load-languages
    'org-babel-do-load-languages
    '((python . t)
+     (R . t)
      (emacs-lisp . t)))
   (setq org-confirm-babel-evaluate nill)
   (setq org-babel-python-command "python3"))
