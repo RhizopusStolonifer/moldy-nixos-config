@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ./configuration.nix
     ../../modules/system
+    ./media.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -39,7 +40,7 @@
 
   boot = {
     kernelModules = [ "acpi_call" ];
-    extraModulePackages = 
+    extraModulePackages =
       with config.boot.kernelPackages;
       [
         acpi_call
