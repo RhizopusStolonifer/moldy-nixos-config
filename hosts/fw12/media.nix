@@ -8,6 +8,7 @@
 {
   services.syncthing = {
     enable = true;
+    openDefaultPorts = true;
     settings.gui = {
       user = "myco";
       password = "@Cq8TNBGh&CFjVArNjP#";

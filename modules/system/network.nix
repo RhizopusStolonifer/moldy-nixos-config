@@ -1,4 +1,9 @@
-{ pkgs, host, ... }:
+{
+  pkgs,
+  host,
+  config,
+  ...
+}:
 {
   networking = {
     hostName = "${host}";
@@ -9,10 +14,18 @@
       allowedTCPPorts = [
       ];
       allowedUDPPorts = [
+        config.services.tailscale.port
       ];
-      trustedInterfaces = [ "tailscale0" ];
+      trustedInterfaces = [
+        "tailscale0"
+        config.services.tailscale.tailscale0
+      ];
     };
   };
 
   time.timeZone = "America/Vancouver";
+
+  services.tailscale.enable = true;
+  networking.nftables.enable = true;
+  systemd.services.tailscaled.serviceConfig.Environment = [ "TS_DEBUG_FIREWALL_MODE=nftables" ];
 }
