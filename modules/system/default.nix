@@ -18,5 +18,6 @@
     ./fcitx5.nix
     ./stylix.nix
     #./secrets.nix
+    ./virtualisation.nix
   ];
 }

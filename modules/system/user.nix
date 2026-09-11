@@ -32,6 +32,7 @@
       "networkmanager"
       "wheel"
       "inputs"
+      "libvirtd"
     ];
     shell = pkgs.zsh;
   };
