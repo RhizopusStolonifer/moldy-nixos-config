@@ -2,6 +2,7 @@
 {
   programs = {
     zsh.enable = true;
+    gpu-screen-recorder.enable = true;
   };
   programs.kdeconnect = {
     enable = true;
@@ -40,7 +41,6 @@
     songrec
     puddletag
     umu-launcher
-    gpu-screen-recorder
     nix-search
     feishin
     supersonic
