@@ -19,6 +19,7 @@
       trustedInterfaces = [
         "tailscale0"
         config.services.tailscale.interfaceName
+        "virbr0"
       ];
     };
   };
