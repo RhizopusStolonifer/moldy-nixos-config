@@ -45,6 +45,7 @@
     feishin
     supersonic
     libqalculate
+    unrar
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
