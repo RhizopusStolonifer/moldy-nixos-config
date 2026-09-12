@@ -4,6 +4,7 @@
     enable = true;
     qemu = {
       swtpm.enable = true;
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
 
