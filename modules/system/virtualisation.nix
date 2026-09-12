@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   virtualisation.libvirtd = {
     enable = true;
@@ -16,5 +16,26 @@
     virt-manager
     virtiofsd
     dnsmasq
+  ];
+
+  services.samba = {
+    enable = true;
+    settings = {
+      global = {
+        "workgroup" = "WORKGROUP";
+        "security" = "user";
+      };
+      vmshare = {
+        "path" = "/home/${username}/vm-shared";
+        "browseable" = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "force user" = username;
+      };
+    };
+  };
+  networking.firewall.allowedTCPPorts = [
+    139
+    445
   ];
 }
