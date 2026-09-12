@@ -4,8 +4,8 @@
     enable = true;
     qemu = {
       swtpm.enable = true;
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
-    vhostUserPackages = with pkgs; [ virtiofsd ];
   };
 
   virtualisation.spiceUSBRedirection.enable = true;
