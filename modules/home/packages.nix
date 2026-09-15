@@ -80,7 +80,7 @@
           plover-console-ui
           # plover-excel-dictionary
           # plover-listening-lookup
-          plover-next-stroke
+          # plover-next-stroke
           plover-ninja
           plover-python-dictionary
           plover-uinput
