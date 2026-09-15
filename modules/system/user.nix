@@ -14,7 +14,10 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs username host; };
-    sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
+    sharedModules = [
+      inputs.sops-nix.homeManagerModules.sops
+      inputs.plover-flake.homeManagerModules.plover
+    ];
     users.${username} = {
       imports = [ ../home ];
       home.username = "${username}";
