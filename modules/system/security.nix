@@ -21,5 +21,8 @@
 
     # STM32 DFU bootloader (generic)
     SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE:="0666"
+
+    # plover
+    KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
   '';
 }

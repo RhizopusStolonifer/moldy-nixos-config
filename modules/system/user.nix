@@ -33,6 +33,8 @@
       "wheel"
       "inputs"
       "libvirtd"
+      "input"
+      "dialout"
     ];
     shell = pkgs.zsh;
   };
