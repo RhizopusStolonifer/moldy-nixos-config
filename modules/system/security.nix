@@ -24,5 +24,8 @@
 
     # plover
     KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
+
+    # tell ModemManager to ignore the Moonlander's virtual serial port
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="3297", ENV{ID_MM_DEVICE_IGNORE}="1"
   '';
 }

@@ -84,6 +84,7 @@
           plover-ninja
           plover-python-dictionary
           plover-uinput
+          plover-run-shell
         ]
       );
     };
