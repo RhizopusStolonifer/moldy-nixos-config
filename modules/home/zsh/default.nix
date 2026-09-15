@@ -20,39 +20,6 @@
       execute = "nix run github:thiagokokada/nix-alien --";
     };
 
-    initExtra =
-      if host == "mycorrhiza" then
-        ''
-          switch() {
-              if [ -z "$1" ]; then
-                  echo "Error: Commit message required."
-                  return 1
-              fi
-
-              z ~/moldy-nixos-config && \
-              git add -A && \
-              git commit -m "$1" && \
-              git push && \
-              nh os switch
-          }
-        ''
-      else
-        ''
-          bindkey -v
-          switch() {
-              if [ -z "$1" ]; then
-                  echo "Error: Commit message required."
-                  return 1
-              fi
-
-              z ~/moldy-nixos-config && \
-              git add -A && \
-              git commit -m "$1" && \
-              git push && \
-              nh os switch
-          }
-        '';
-
     zsh-abbr = {
       enable = true;
     };
@@ -92,13 +59,28 @@
       # p10k instant prompt
       (lib.mkOrder 500 ''
         eval "$(pay-respects zsh)"
-          bash ${./pokemon.sh}
+        ${lib.optionalString (host == "mycorrhiza") "bash ${./pokemon.sh}"}
       '')
       (lib.mkOrder 1000 ''
         if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
         typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet;
+      '')
+      (lib.mkOrder 1500 ''
+        ${lib.optionalString (host != "mycorrhiza") "bindkey -v"}
+        switch() {
+            if [ -z "$1" ]; then
+                echo "Error: Commit message required."
+                return 1
+            fi
+
+            z ~/moldy-nixos-config && \
+            git add -A && \
+            git commit -m "$1" && \
+            git push && \
+            nh os switch
+        }
       '')
       (lib.mkOrder 2000 ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
