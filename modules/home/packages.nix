@@ -78,7 +78,7 @@
           plover-lapwing-aio
           plover-clippy-2
           plover-console-ui
-          plover-excel-dictionary
+          # plover-excel-dictionary
           plover-listening-lookup
           plover-next-stroke
           plover-ninja
