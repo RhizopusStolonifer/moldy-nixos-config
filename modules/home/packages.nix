@@ -79,7 +79,7 @@
           plover-clippy-2
           plover-console-ui
           # plover-excel-dictionary
-          plover-listening-lookup
+          # plover-listening-lookup
           plover-next-stroke
           plover-ninja
           plover-python-dictionary
