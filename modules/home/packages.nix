@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
     # utilities
@@ -70,6 +70,23 @@
     direnv = {
       enable = true;
       nix-direnv.enable = true;
+    };
+    plover = {
+      enable = true;
+      package = inputs.plover-flake.packages.${pkgs.stdenv.hostPlatform.system}.plover.withPlugins (
+        ps: with ps; [
+          plover-lapwing-aio
+          plover-clippy-2
+          plover-console-ui
+          # plover-excel-dictionary
+          # plover-listening-lookup
+          # plover-next-stroke
+          plover-ninja
+          plover-python-dictionary
+          plover-uinput
+          plover-run-shell
+        ]
+      );
     };
   };
 }
