@@ -49,6 +49,7 @@
     inputs.winapps.packages.${pkgs.system}.winapps
     inputs.winapps.packages.${pkgs.system}.winapps-launcher
     # inputs.winapps.packages.${pkgs.system}.winapps-setup
+    dialog
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
