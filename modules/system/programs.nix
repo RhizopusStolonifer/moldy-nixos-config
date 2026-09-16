@@ -50,6 +50,7 @@
     inputs.winapps.packages.${pkgs.system}.winapps-launcher
     # inputs.winapps.packages.${pkgs.system}.winapps-setup
     dialog
+    libnotify
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
