@@ -36,6 +36,7 @@
       "wheel"
       "inputs"
       "libvirtd"
+      "libvirt"
       "input"
       "dialout"
       "kvm"
