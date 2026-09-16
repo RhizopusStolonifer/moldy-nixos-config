@@ -8,14 +8,24 @@
     };
   };
 
+  virtualisation.podman = {
+    enable = true;
+  };
+
   virtualisation.spiceUSBRedirection.enable = true;
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
 
   environment.systemPackages = with pkgs; [
+    podman-compose
     virt-manager
     virtiofsd
     dnsmasq
+  ];
+
+  boot.kernelModules = [
+    "ip_tables"
+    "iptable_nat"
   ];
 
   services.samba = {

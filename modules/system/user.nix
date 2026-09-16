@@ -38,6 +38,7 @@
       "libvirtd"
       "input"
       "dialout"
+      "kvm"
     ];
     shell = pkgs.zsh;
   };
