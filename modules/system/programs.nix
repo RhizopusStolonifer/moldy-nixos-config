@@ -51,6 +51,7 @@
     # inputs.winapps.packages.${pkgs.system}.winapps-setup
     dialog
     libnotify
+    freerdp
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
