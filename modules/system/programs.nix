@@ -48,7 +48,7 @@
     unrar
     inputs.winapps.packages.${pkgs.system}.winapps
     inputs.winapps.packages.${pkgs.system}.winapps-launcher
-    inputs.winapps.packages.${pkgs.system}.winapps-setup
+    # inputs.winapps.packages.${pkgs.system}.winapps-setup
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
