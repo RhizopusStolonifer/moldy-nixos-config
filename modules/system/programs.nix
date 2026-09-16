@@ -46,6 +46,9 @@
     supersonic
     libqalculate
     unrar
+    inputs.winapps.packages.${pkgs.system}.winapps
+    inputs.winapps.packages.${pkgs.system}.winapps-launcher
+    inputs.winapps.packages.${pkgs.system}.winapps-setup
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
@@ -65,4 +68,9 @@
   ];
 
   nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
+
+  nix.settings = {
+    substituters = [ "https://winapps.cachix.org/" ];
+    trusted-public-keys = [ "winapps.cachix.org-1:HI82jWrXZsQRar/PChgIx1unmuEsiQMQq+zt05CD36g=" ];
+  };
 }
