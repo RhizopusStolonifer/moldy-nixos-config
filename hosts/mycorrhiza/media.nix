@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.jellyfin = {
@@ -8,6 +8,11 @@
 
   services.navidrome = {
     enable = true;
+
+    plugins = with pkgs.navidromePlugins; [
+      discord-rich-presence
+      listenbrainz-daily-playlist
+    ];
 
     settings = {
       Address = "100.104.239.104";
