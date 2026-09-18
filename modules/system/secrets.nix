@@ -10,6 +10,9 @@
       acoustid_apikey = {
         owner = "myco";
       };
+      syncthing_gui_password = {
+        owner = "myco";
+      };
     };
   };
 }

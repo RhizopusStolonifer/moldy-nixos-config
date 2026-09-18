@@ -12,10 +12,10 @@
     guiAddress = "0.0.0.0:8384";
     user = "myco";
     group = "users";
+    guiPasswordFile = config.sops.secrets.syncthing_gui_password.path;
     settings = {
       gui = {
         user = "myco";
-        password = "@Cq8TNBGh&CFjVArNjP#";
       };
       devices = {
         "mycorrhiza" = {
