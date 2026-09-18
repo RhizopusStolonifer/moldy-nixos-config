@@ -10,8 +10,8 @@
     enable = true;
 
     plugins = with pkgs.navidromePlugins; [
-      discord-rich-presence
-      listenbrainz-daily-playlist
+      # discord-rich-presence
+      # listenbrainz-daily-playlist
     ];
 
     settings = {
