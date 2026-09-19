@@ -11,7 +11,7 @@
 
     plugins = with pkgs.navidromePlugins; [
       # discord-rich-presence
-      # listenbrainz-daily-playlist
+      listenbrainz-daily-playlist
     ];
 
     settings = {
