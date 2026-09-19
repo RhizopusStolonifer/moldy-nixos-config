@@ -20,6 +20,18 @@
     };
   };
 
+  # Navidrome binds to the Tailscale IP, so it must not start until
+  # tailscaled has brought the interface up (After=network.target alone
+  # isn't enough and caused boot-time bind failures).
+  systemd.services.navidrome = {
+    after = [ "tailscaled.service" ];
+    wants = [ "tailscaled.service" ];
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
+
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
