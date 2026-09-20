@@ -52,6 +52,7 @@ bulk_add() {
 	shift 2
 
 	local abspath relpath added=0
+	# shellcheck disable=SC2016 # $path is beet's format placeholder, not a shell variable
 	while IFS= read -r abspath; do
 		[[ -z "$abspath" ]] && continue
 		relpath=$(realpath --relative-to="$PLAYLIST_DIR" "$abspath")
@@ -88,6 +89,7 @@ interactive_rm() {
 		grep -v '^#' "$file" | while IFS= read -r rel; do
 			[[ -z "$rel" ]] && continue
 			abspath=$(realpath -m "$PLAYLIST_DIR/$rel")
+			# shellcheck disable=SC2016 # $artist/$title are beet's format placeholders, not shell variables
 			label=$(beet ls -f '$artist - $title' path:"$abspath" 2>/dev/null || true)
 			if [[ -z "$label" ]]; then
 				label="$rel"
@@ -126,6 +128,7 @@ bulk_rm() {
 	shift 2
 
 	local matches
+	# shellcheck disable=SC2016 # $path is beet's format placeholder, not a shell variable
 	matches=$(beet ls -f '$path' "$@")
 	if [[ -z "$matches" ]]; then
 		echo "No matching tracks."
