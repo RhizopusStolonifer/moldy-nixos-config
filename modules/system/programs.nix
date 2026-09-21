@@ -53,6 +53,9 @@
     libnotify
     freerdp
     termsonic
+    karere
+    nchat
+    whatsie
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
@@ -78,7 +81,9 @@
       # but Fluxer's build server now packages the .deb with a lowercase,
       # unspaced "opt/fluxer-canary" dir, breaking installPhase's cp glob.
       fluxer-canary = prev.fluxer-canary.overrideAttrs (old: {
-        installPhase = builtins.replaceStrings [ "opt/Fluxer Canary" ] [ "opt/fluxer-canary" ] old.installPhase;
+        installPhase =
+          builtins.replaceStrings [ "opt/Fluxer Canary" ] [ "opt/fluxer-canary" ]
+            old.installPhase;
       });
     })
   ];
