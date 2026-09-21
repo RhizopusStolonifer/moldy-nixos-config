@@ -71,7 +71,17 @@
     })
   ];
 
-  nixpkgs.overlays = [ inputs.fluxer.overlays.default ];
+  nixpkgs.overlays = [
+    inputs.fluxer.overlays.default
+    (final: prev: {
+      # Upstream's fluxer-canary.nix hardcodes extractDir = "Fluxer Canary",
+      # but Fluxer's build server now packages the .deb with a lowercase,
+      # unspaced "opt/fluxer-canary" dir, breaking installPhase's cp glob.
+      fluxer-canary = prev.fluxer-canary.overrideAttrs (old: {
+        installPhase = builtins.replaceStrings [ "opt/Fluxer Canary" ] [ "opt/fluxer-canary" ] old.installPhase;
+      });
+    })
+  ];
 
   nix.settings = {
     substituters = [ "https://winapps.cachix.org/" ];
