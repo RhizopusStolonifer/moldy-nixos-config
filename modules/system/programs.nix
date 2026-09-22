@@ -56,6 +56,7 @@
     karere
     nchat
     whatsie
+    usbutils
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
