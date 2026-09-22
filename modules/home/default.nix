@@ -9,7 +9,6 @@
     ./emacs
     ./niri
     ./beets.nix
-    ./playlist-tool.nix
     ./notetaking
     ./ghostty
     ./cursor
