@@ -7,6 +7,7 @@
     ./packages.nix
     ./yazi
     ./emacs
+    ./mail.nix
     ./niri
     ./beets.nix
     ./notetaking

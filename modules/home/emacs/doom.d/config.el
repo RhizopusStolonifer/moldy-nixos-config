@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "Rhizopus Stolonifer"
+      user-mail-address "you@protonmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -120,3 +120,39 @@
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
+
+(after! mu4e
+  (setq mu4e-maildir "~/mail/proton"
+        mu4e-change-filenames-when-moving t
+        mu4e-update-interval (* 10 60)
+        mu4e-get-mail-command "mbsync -a"
+        mu4e-compose-format-flowed t
+        mu4e-maildir-shortcuts
+        '(("/proton/inbox"    . ?i)
+          ("/proton/Sent"     . ?s)
+          ("/proton/Trash"    . ?t)
+          ("/proton/Drafts"   . ?d)
+          ("/proton/All Mail" . ?a)))
+
+  (set-email-account! "proton"
+                      '((mu4e-sent-folder     . "/proton/Sent")
+                        (mu4e-drafts-folder   . "/proton/Drafts")
+                        (mu4e-trash-folder    . "/proton/Trash")
+                        (mu4e-refile-folder   . "/proton/All Mail")
+                        (smtpmail-smtp-user   . "you@protonmail.com")
+                        (smtpmail-smtp-server . "127.0.0.1")
+                        (smtpmail-smtp-service . 1025)
+                        (smtpmail-stream-type  . ssl)
+                        (user-mail-address     . "raskpaul@protonmail.com"))
+                      t)
+
+  (setq auth-sources '("/run/secrets-rendered/mu4e-authinfo")))
+
+(after! org-msg
+  (setq org-msg-options "html-postamble:nil H:5 num:nil ^:{} toc:nil author:nil email:nil \\n:t"
+        org-msg-startup "hidestars indent inlineimages"
+        org-msg-default-alternatives '((new           . (text html))
+                                       (reply-to-html . (text html))
+                                       (reply-to-text . (text)))
+        org-msg-convert-citation t)
+  (org-msg-mode))
