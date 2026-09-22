@@ -103,8 +103,4 @@
   (setq org-roam-capture-templates
         '(("d" "default" plain "%?"
            :target (file+head "${slug}.org" "#+title: ${title}\n")
-           :unnarrowed t)
-          ("m" "MATH232" plain "%?"
-           :target (file+head "${slug}.org"
-                              "#+title: ${title}\n#+PROPERTY: header-args:python :session math232 :results output\n#+PROPERTY: header-args:R :session math232-R :results output\n")
            :unnarrowed t))))
