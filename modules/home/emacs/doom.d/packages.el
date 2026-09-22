@@ -58,3 +58,5 @@
 (package! envrc)
 ;; :hook (after-init . envrc-global-mode))
 (package! hledger-mode)
+(unpin! org-roam)
+(package! org-roam-ui)
