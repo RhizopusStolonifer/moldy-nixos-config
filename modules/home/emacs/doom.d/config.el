@@ -120,6 +120,7 @@
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
+(global-set-key (kbd "C-c C-u C-i") 'org-roam-ui-mode)
 
 (add-to-list 'load-path "/etc/profiles/per-user/myco/share/emacs/site-lisp/mu4e")
 
