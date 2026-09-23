@@ -12,7 +12,7 @@
     Port 1143
     User raskpaul@protonmail.com
     PassCmd "cat /run/secrets/protonmail_bridge_password"
-    SSLType NONE
+    TLSType NONE
 
     IMAPStore proton-remote
     Account proton
