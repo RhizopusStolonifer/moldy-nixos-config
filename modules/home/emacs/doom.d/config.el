@@ -121,6 +121,8 @@
 ;;        org-roam-ui-update-on-save t
 ;;        org-roam-ui-open-on-start t))
 
+(add-to-list 'load-path "/etc/profiles/per-user/myco/share/emacs/site-lisp/mu4e")
+
 (after! mu4e
   (setq mu4e-maildir "~/mail/proton"
         mu4e-change-filenames-when-moving t

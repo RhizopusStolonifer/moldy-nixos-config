@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     mu
+    mu.mu4e
     isync
     protonmail-bridge
   ];
