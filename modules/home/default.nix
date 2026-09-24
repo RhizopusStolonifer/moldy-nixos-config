@@ -14,5 +14,6 @@
     ./ghostty
     ./cursor
     ./vicinae.nix
+    ./neovim
   ];
 }

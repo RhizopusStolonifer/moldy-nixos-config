@@ -60,6 +60,11 @@
     hledger
     hledger-ui
     hledger-web
+
+    # neovim
+    yaml-language-server
+    stylua
+    lazygit
   ];
 
   programs = {
