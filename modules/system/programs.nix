@@ -90,7 +90,13 @@
   ];
 
   nix.settings = {
-    substituters = [ "https://winapps.cachix.org/" ];
-    trusted-public-keys = [ "winapps.cachix.org-1:HI82jWrXZsQRar/PChgIx1unmuEsiQMQq+zt05CD36g=" ];
+    substituters = [
+      "https://winapps.cachix.org/"
+      "https://vicinae.cachix.org"
+    ];
+    trusted-public-keys = [
+      "winapps.cachix.org-1:HI82jWrXZsQRar/PChgIx1unmuEsiQMQq+zt05CD36g="
+      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
+    ];
   };
 }
