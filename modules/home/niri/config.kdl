@@ -293,7 +293,7 @@ recent-windows {
 }
 
 cursor {
-    xcursor-theme "teto"
+    xcursor-theme "adachi-rei"
     xcursor-size 24
 }
 
@@ -304,6 +304,5 @@ include optional=true "dms/alttab.kdl"
 include optional=true "dms/binds.kdl"
 include optional=true "dms/binds-host.kdl"
 include optional=true "dms/outputs.kdl"
-include optional=true "dms/cursor.kdl"
 
 //include "dms-theme-sync.kdl"
