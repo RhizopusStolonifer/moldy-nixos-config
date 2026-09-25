@@ -3,9 +3,6 @@ stdenv.mkDerivation {
   pname = "adachi-rei-cursor";
   version = "1.0";
 
-  # the theme's own subfolders have spaces in their names, which can't be a Nix
-  # store path's own top-level name — so source the whole cursor dir (whose name
-  # is space-free) and reach the spaced subpath at build time instead
   src = ../../home/cursor;
   nativeBuildInputs = [ win2xcur ];
   dontUnpack = true;
@@ -29,8 +26,6 @@ stdenv.mkDerivation {
       for n in "''${names[@]:1}"; do ln -sf "''${names[0]}" "$n"; done
     }
 
-    # mapping taken from install.inf, which names these files directly
-    # after their Windows cursor-scheme roles (Normal, Help, Working, ...)
     convert "Normal"      left_ptr default arrow top_left_arrow
     convert "Help"        help left_ptr_help question_arrow
     convert "Working"     progress left_ptr_watch half-busy
@@ -46,7 +41,6 @@ stdenv.mkDerivation {
     convert "Move"        move fleur size_all all-scroll
     convert "Alternate"   up-arrow
     convert "Link"        pointer hand2 hand1 pointing_hand
-    # Person and Pin have no standard X11 cursor name — skipped
 
     printf '[Icon Theme]\nName=%s\n' "$themeName" > "$themeDir/index.theme"
     cp "$themeDir/index.theme" "$themeDir/cursor.theme"

@@ -25,8 +25,6 @@ stdenv.mkDerivation {
       for n in "''${names[@]:1}"; do ln -sf "''${names[0]}" "$n"; done
     }
 
-    # this theme's own miku-miku-oo-ee-oo.crs maps these roles explicitly —
-    # trusted over guessing from filenames alone, even where the name looks odd
     convert "Normal"                left_ptr default arrow top_left_arrow
     convert "Help_32-48-64"         help left_ptr_help question_arrow
     convert "Wait_32-48-64"         progress left_ptr_watch half-busy wait watch
@@ -35,7 +33,6 @@ stdenv.mkDerivation {
     convert "Move"                  move fleur size_all all-scroll
     convert "NotAllowed"            not-allowed crossed_circle forbidden
 
-    # not referenced by the .crs, but self-descriptive X11 drag/resize/zoom cursors
     convert "EWResize"          ew-resize size_hor sb_h_double_arrow h_double_arrow
     convert "NSResize"          ns-resize size_ver sb_v_double_arrow v_double_arrow
     convert "copy_32-48-64"     copy dnd-copy
@@ -44,8 +41,6 @@ stdenv.mkDerivation {
     convert "dnd-ask_32-48-64"  dnd-ask
     convert "zoom-in_32-48-64"  zoom-in
     convert "zoom-out_32-48-64" zoom-out
-    # AppStarting_*, NotAllowed_1/2_*, Normal_*, dot_box_mask have no clear,
-    # unambiguous standard-name mapping of their own — skipped
 
     printf '[Icon Theme]\nName=%s\n' "$themeName" > "$themeDir/index.theme"
     cp "$themeDir/index.theme" "$themeDir/cursor.theme"

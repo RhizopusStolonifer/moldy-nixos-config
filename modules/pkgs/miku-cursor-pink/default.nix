@@ -3,8 +3,6 @@ stdenv.mkDerivation {
   pname = "hatsune-miku-cursor-pink";
   version = "1.0";
 
-  # the folder name still has parens, which Nix path literals can't contain unquoted —
-  # same trick as the space issue: path + string concatenation
   src = ../../home/cursor + "/Hatsune_Miku_Cursor_(Version_2)_by_Wobb/Pink_Version";
   nativeBuildInputs = [ win2xcur ];
   dontUnpack = true;
@@ -42,7 +40,6 @@ stdenv.mkDerivation {
     convert "Move"                  move fleur size_all all-scroll
     convert "Alternate Select"      up-arrow
     convert "Link Select"           pointer hand2 hand1 pointing_hand
-    # "Location Select" and "Person Select" have no standard X11 cursor name — skipped
 
     printf '[Icon Theme]\nName=%s\n' "$themeName" > "$themeDir/index.theme"
     cp "$themeDir/index.theme" "$themeDir/cursor.theme"
