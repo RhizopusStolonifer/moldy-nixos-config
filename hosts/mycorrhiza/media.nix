@@ -20,14 +20,6 @@
     };
   };
 
-  # Navidrome binds to the Tailscale IP, so it must not start until
-  # tailscaled has brought the interface up (After=network.target alone
-  # isn't enough and caused boot-time bind failures). tailscaled.service
-  # itself becomes "active" as soon as the daemon starts, before the IP is
-  # actually assigned, so the ordering alone doesn't fully close the race.
-  # On a failed bind, Navidrome logs a fatal error but still exits 0, so
-  # Restart=on-failure never fires (systemd sees a clean exit); use
-  # Restart=always so it keeps retrying until the address exists.
   systemd.services.navidrome = {
     after = [ "tailscaled.service" ];
     wants = [ "tailscaled.service" ];
