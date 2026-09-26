@@ -9,7 +9,7 @@
   services.navidrome = {
     enable = true;
 
-    plugins = with pkgs.navidromePlugins; [
+    plugins = with pkgs.pkgsCross.wasi32.navidromePlugins; [
       # discord-rich-presence
       listenbrainz-daily-playlist
     ];
