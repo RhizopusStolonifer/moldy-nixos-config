@@ -40,11 +40,6 @@
         src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
       }
       {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-      {
         name = "zsh-completions";
         src = pkgs.zsh-completions;
       }
@@ -56,16 +51,9 @@
     ];
 
     initContent = lib.mkMerge [
-      # p10k instant prompt
       (lib.mkOrder 500 ''
         eval "$(pay-respects zsh)"
         ${lib.optionalString (host == "mycorrhiza") "bash ${./pokemon.sh}"}
-      '')
-      (lib.mkOrder 1000 ''
-        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-        fi
-        typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet;
       '')
       (lib.mkOrder 1500 ''
         ${lib.optionalString (host != "mycorrhiza") "bindkey -v"}
@@ -82,11 +70,20 @@
             nh os switch
         }
       '')
-      (lib.mkOrder 2000 ''
-        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      '')
     ];
 
+  };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = false;
+      format = "$os$directory$git_branch$git_status\n$character";
+      right_format = "$status$cmd_duration$jobs$direnv$nix_shell$python$aws$gcloud$kubernetes$terraform";
+      os.disabled = false;
+      status.disabled = false;
+      cmd_duration.min_time = 3000;
+    };
   };
 
   programs.zoxide = {
@@ -100,6 +97,4 @@
   };
 
   home.sessionPath = [ "${config.home.homeDirectory}/.config/emacs/bin" ];
-
-  #home.file.".p10k.zsh".source = ./.p10k.zsh;
 }
