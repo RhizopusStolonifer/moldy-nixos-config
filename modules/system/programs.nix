@@ -57,6 +57,7 @@
     nchat
     whatsie
     usbutils
+    herioc
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
