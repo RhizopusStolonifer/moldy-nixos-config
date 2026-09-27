@@ -20,6 +20,7 @@
         "tailscale0"
         config.services.tailscale.interfaceName
         "virbr0"
+        "waydroid0"
       ];
     };
   };

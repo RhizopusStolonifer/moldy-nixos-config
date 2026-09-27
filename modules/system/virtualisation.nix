@@ -12,6 +12,11 @@
     enable = true;
   };
 
+  #virtualisation.waydroid = {
+  #  enable = true;
+  #  package = pkgs.waydroid-nftables;
+  #};
+
   users.groups.libvirt = { };
   virtualisation.spiceUSBRedirection.enable = true;
   services.qemuGuest.enable = true;
@@ -22,6 +27,7 @@
     virt-manager
     virtiofsd
     dnsmasq
+    wl-clipboard
   ];
 
   boot.kernelModules = [
