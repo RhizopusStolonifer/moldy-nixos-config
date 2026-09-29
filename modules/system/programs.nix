@@ -58,6 +58,7 @@
     whatsie
     usbutils
     heroic
+    linecast
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
