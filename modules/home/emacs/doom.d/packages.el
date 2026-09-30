@@ -60,3 +60,4 @@
 (package! hledger-mode)
 (unpin! org-roam)
 (package! org-roam-ui)
+(package! elfeed)
