@@ -13,32 +13,43 @@
     libraries = with pkgs; [
       stdenv.cc.cc
       glib
-      nss
-      nspr
-      atk
-      at-spi2-atk
-      at-spi2-core
-      cups
-      dbus
-      libdrm
+      gdk-pixbuf
       gtk3
       pango
       cairo
+      atk
+      at-spi2-atk
+      at-spi2-core
+      nss
+      nspr
+      cups
+      dbus
       expat
-      libxkbcommon
-      mesa
+      libdrm
       libgbm
-      alsa-lib
+      mesa
       libGL
-      xorg.libX11
-      xorg.libXcomposite
-      xorg.libXdamage
-      xorg.libXext
-      xorg.libXfixes
-      xorg.libXrandr
-      xorg.libxcb
-      xorg.libxshmfence
+      libxkbcommon
+      alsa-lib
       systemd
+      libnotify
+      libsecret
+      libuuid
+      fontconfig
+      freetype
+      libX11
+      libXcomposite
+      libXdamage
+      libXext
+      libXfixes
+      libXrandr
+      libxcb
+      libxshmfence
+      libXcursor
+      libXi
+      libXrender
+      libXtst
+      libXScrnSaver
     ];
   };
 
