@@ -8,6 +8,39 @@
     enable = true;
     package = pkgs.valent;
   };
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+      glib
+      nss
+      nspr
+      atk
+      at-spi2-atk
+      at-spi2-core
+      cups
+      dbus
+      libdrm
+      gtk3
+      pango
+      cairo
+      expat
+      libxkbcommon
+      mesa
+      libgbm
+      alsa-lib
+      libGL
+      xorg.libX11
+      xorg.libXcomposite
+      xorg.libXdamage
+      xorg.libXext
+      xorg.libXfixes
+      xorg.libXrandr
+      xorg.libxcb
+      xorg.libxshmfence
+      systemd
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
     smartmontools
