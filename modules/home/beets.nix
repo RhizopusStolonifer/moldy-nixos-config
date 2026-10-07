@@ -64,6 +64,10 @@
             name = "2020s.m3u";
             query = "year:2020..2029";
           }
+          {
+            name = "maybe.m3u";
+            query = "^genres:Classical";
+          }
         ];
       };
     };
