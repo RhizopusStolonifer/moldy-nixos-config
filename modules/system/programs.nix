@@ -104,7 +104,6 @@
     heroic
     linecast
     scrcpy
-    adbtuifm
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
@@ -112,6 +111,7 @@
         scipy
         sympy
         matplotlib
+        abd-shell
       ]
     ))
 
