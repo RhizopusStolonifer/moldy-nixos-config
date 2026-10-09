@@ -103,6 +103,8 @@
     usbutils
     heroic
     linecast
+    scrcpy
+    adbtuifm
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
