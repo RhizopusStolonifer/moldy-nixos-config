@@ -111,7 +111,7 @@
         scipy
         sympy
         matplotlib
-        abd-shell
+        adb-shell
       ]
     ))
 
