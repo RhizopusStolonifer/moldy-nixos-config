@@ -104,6 +104,8 @@
     heroic
     linecast
     scrcpy
+    bottom
+    btop
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
