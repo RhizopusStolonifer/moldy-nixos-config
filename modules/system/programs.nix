@@ -106,6 +106,7 @@
     scrcpy
     bottom
     btop
+    zoom-us
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
