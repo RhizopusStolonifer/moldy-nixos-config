@@ -107,6 +107,7 @@
     bottom
     btop
     zoom-us
+    r2modman
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
