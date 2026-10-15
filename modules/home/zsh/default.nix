@@ -92,7 +92,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "emacs";
+    EDITOR = "ghostty -e nvim";
     VISUAL = "emacs";
   };
 
