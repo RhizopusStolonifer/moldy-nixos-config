@@ -13,7 +13,7 @@
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
-  }
+  };
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
