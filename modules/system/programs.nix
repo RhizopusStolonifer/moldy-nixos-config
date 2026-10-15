@@ -8,7 +8,7 @@
     enable = true;
     package = pkgs.valent;
   };
-  programs.sunshine = {
+  services.sunshine = {
     enable = true;
     autoStart = true;
     capSysAdmin = true;
