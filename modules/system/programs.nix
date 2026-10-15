@@ -8,6 +8,12 @@
     enable = true;
     package = pkgs.valent;
   };
+  programs.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  }
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
@@ -109,7 +115,6 @@
     zoom-us
     r2modman
     proton-pass
-    sunshine
     moonlight
 
     (python3.withPackages (
