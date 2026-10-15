@@ -92,8 +92,9 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "ghostty -e nvim";
+    EDITOR = "emacs";
     VISUAL = "emacs";
+    SSH_AUTH_SOCK = "/home/myco/.ssh/proton-pass-ssh-agent.sock";
   };
 
   home.sessionPath = [ "${config.home.homeDirectory}/.config/emacs/bin" ];
