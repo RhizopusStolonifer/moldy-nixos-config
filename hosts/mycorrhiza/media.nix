@@ -4,6 +4,7 @@
   services.jellyfin = {
     enable = true;
     user = "myco";
+    openDefaultPorts = true;
   };
 
   services.navidrome = {
