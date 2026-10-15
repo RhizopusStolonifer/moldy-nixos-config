@@ -109,6 +109,8 @@
     zoom-us
     r2modman
     proton-pass
+    sunshine
+    moonlight
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
