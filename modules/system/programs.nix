@@ -108,6 +108,7 @@
     btop
     zoom-us
     r2modman
+    proton-pass
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
