@@ -124,7 +124,6 @@
         sympy
         matplotlib
         adb-shell
-        rref
       ]
     ))
 
