@@ -9,7 +9,8 @@
           "Maple Mono"
           "JetBrainsMono Nerd Font"
         ];
-        sansSerif = [ "Inter" ];
+        #sansSerif = [ "Inter" ];
+        sansSerif = [ "Maple Mono" ];
         serif = [ "Noto Serif" ];
         emoji = [ "Noto Color Emoji" ];
       };
