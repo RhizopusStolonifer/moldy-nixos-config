@@ -23,6 +23,7 @@
       options = [
         "defaults"
         "nofail"
+        "rw"
       ];
     };
   };
