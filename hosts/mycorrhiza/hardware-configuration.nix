@@ -22,8 +22,12 @@
     "usb_storage"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ "nvidia" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.initrd.kernelModules = [
+    "nvidia"
+  ];
+  boot.kernelModules = [
+    "kvm-intel"
+  ];
   boot.extraModulePackages = [ ];
   boot.blacklistedKernelModules = [ "nouveau" ];
 

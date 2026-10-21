@@ -26,6 +26,8 @@
 
     prismlauncher
 
+    layan-cursors
+
     # emacs
     gcc
     cmake
