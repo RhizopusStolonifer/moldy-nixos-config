@@ -116,7 +116,6 @@
     r2modman
     proton-pass
     moonlight
-    acpi
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [

@@ -12,7 +12,7 @@
     ./beets.nix
     ./notetaking
     ./ghostty
-    ./cursor
+    #./cursor
     ./vicinae.nix
     ./neovim
   ];
