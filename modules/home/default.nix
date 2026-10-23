@@ -13,7 +13,6 @@
     ./notetaking
     ./ghostty
     #./cursor
-    ./vicinae.nix
     ./neovim
   ];
 }
