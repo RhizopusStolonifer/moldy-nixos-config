@@ -19,5 +19,6 @@
     ./stylix.nix
     ./secrets.nix
     ./virtualisation.nix
+    ./greeter.nix
   ];
 }

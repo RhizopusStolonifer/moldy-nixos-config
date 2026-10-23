@@ -7,12 +7,13 @@ binds {
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+Y hotkey-overlay-title="Open File Manager" { spawn "ghostty" "-e" "yazi"; }
-    Mod+R hotkey-overlay-title="Application Launcher" { spawn "vicinae" "toggle"; }
-    //Mod+R hotkey-overlay-title="Application Launcher" {
-    //    spawn "dms" "ipc" "call" "spotlight" "toggle";
-    //}
+    //Mod+R hotkey-overlay-title="Application Launcher" { spawn "vicinae" "toggle"; }
+    Mod+R hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle";
+    }
     Mod+W hotkey-overlay-title="Open Browser" { spawn "floorp"; }
     Mod+D hotkey-overlay-title="Open Emacs" { spawn "emacs"; }
+    Mod+N hotkey-overlay-title="Open Neovim" { spawn "ghostty" "-e" "nvim"; }
     Mod+S hotkey-overlay-title="Open Steam" { spawn "steam-labwc"; }
     Mod+L hotkey-overlay-title="Open Labwc" { spawn "labwc"; }
     Alt+Space hotkey-overlay-title="Spotlight Bar" {
@@ -32,7 +33,7 @@ binds {
     //Mod+Y hotkey-overlay-title="Browse Wallpapers" {
     //    spawn "dms" "ipc" "call" "dash" "toggle" "wallpaper";
     //}
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    //Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
