@@ -10,7 +10,7 @@
 
   programs.hyprland = {
     enable = true;
-    withUSM = true;
+    withUWSM = true;
   };
 
   services.displayManager.ly = {
