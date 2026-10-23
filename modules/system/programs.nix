@@ -112,6 +112,7 @@
     r2modman
     proton-pass
     moonlight
+    rstudio
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
