@@ -4,10 +4,6 @@
     zsh.enable = true;
     gpu-screen-recorder.enable = true;
   };
-  programs.kdeconnect = {
-    enable = true;
-    package = pkgs.valent;
-  };
   services.sunshine = {
     enable = true;
     autoStart = true;
