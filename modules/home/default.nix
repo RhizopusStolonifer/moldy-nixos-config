@@ -9,7 +9,7 @@
     ./emacs
     ./mail.nix
     ./niri
-    ./beets.nix
+    #./beets.nix
     ./notetaking
     ./ghostty
     #./cursor

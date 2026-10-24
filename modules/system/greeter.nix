@@ -16,7 +16,7 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "doom";
+      animation = "matrix";
       clock = "%c";
     };
   };
