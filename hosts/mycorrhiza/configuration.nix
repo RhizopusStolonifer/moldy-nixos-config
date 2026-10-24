@@ -67,15 +67,15 @@
 
   services.tailscale.enable = true;
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${config.programs.niri.package}/bin/niri-session";
-        user = "myco";
-      };
-    };
-  };
+  #services.greetd = {
+  #  enable = true;
+  #  settings = {
+  #    default_session = {
+  #      command = "${config.programs.niri.package}/bin/niri-session";
+  #      user = "myco";
+  #    };
+  #  };
+  #};
 
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
