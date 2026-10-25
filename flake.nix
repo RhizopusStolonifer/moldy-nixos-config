@@ -52,7 +52,7 @@
     plover-flake.url = "github:opensteno/plover-flake";
 
     disko = {
-      url = "github:nix-community/disko8";
+      url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
