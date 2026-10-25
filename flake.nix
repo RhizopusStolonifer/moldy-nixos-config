@@ -55,6 +55,8 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -78,6 +80,14 @@
           ];
           specialArgs = {
             host = "fw12";
+            inherit self inputs username;
+          };
+        };
+        fw16 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/fw16 ];
+          specialArgs = {
+            host = "fw16";
             inherit self inputs username;
           };
         };
