@@ -1,10 +1,17 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix
     ./configuration.nix
     ../../modules/system
     ./media.nix
+    inputs.disko.nixosModules.disko
+    ./disko.nix
   ];
 
   environment.systemPackages = with pkgs; [

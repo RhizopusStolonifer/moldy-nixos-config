@@ -91,9 +91,6 @@
     supersonic
     libqalculate
     unrar
-    inputs.winapps.packages.${pkgs.system}.winapps
-    inputs.winapps.packages.${pkgs.system}.winapps-launcher
-    # inputs.winapps.packages.${pkgs.system}.winapps-setup
     dialog
     libnotify
     freerdp

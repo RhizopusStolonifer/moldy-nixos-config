@@ -9,14 +9,14 @@
   imports = [
   ];
 
-  fileSystems = {
-    "/".options = [ "compress=zstd" ];
-    "/home".options = [ "compress=zstd" ];
-    "/nix".options = [
-      "compress=zstd"
-      "noatime"
-    ];
-  };
+  #fileSystems = {
+  #  "/".options = [ "compress=zstd" ];
+  #  "/home".options = [ "compress=zstd" ];
+  #  "/nix".options = [
+  #    "compress=zstd"
+  #    "noatime"
+  #  ];
+  #};
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";

@@ -11,12 +11,8 @@
     image = ../../Wallpapers/dracula-cat-282a36.png;
 
     fonts = {
-      #monospace = {
-      #  package = pkgs.maple-mono-custom;
-      #  name = "Maple Mono";
-      #};
       monospace = {
-        package = pkgs.kode-mono;
+        package = pkgs.maple-mono-custom;
         name = "Maple Mono";
       };
       sansSerif = {

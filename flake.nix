@@ -51,8 +51,8 @@
 
     plover-flake.url = "github:opensteno/plover-flake";
 
-    winapps = {
-      url = "github:winapps-org/winapps";
+    disko = {
+      url = "github:nix-community/disko8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
