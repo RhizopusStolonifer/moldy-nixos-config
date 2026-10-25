@@ -3,7 +3,6 @@
   programs = {
     zsh.enable = true;
     gpu-screen-recorder.enable = true;
-    fwupd.enable = true;
   };
   services.sunshine = {
     enable = true;

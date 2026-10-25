@@ -15,6 +15,8 @@
     inputs.nixos-hardware.nixosModules.framework-12-13th-gen-intel
   ];
 
+  hardware.framework.enableKmod = false;
+
   environment.systemPackages = with pkgs; [
     #acpi
     brightnessctl

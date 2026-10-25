@@ -15,6 +15,9 @@
     inputs.nixos-hardware.nixosModules.framework-16-7040-amd
   ];
 
+  # re-enable once shit's fixed
+  hardware.framework.enableKmod = false;
+
   environment.systemPackages = with pkgs; [
     #acpi
     brightnessctl
