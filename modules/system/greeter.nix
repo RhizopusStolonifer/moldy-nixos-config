@@ -18,10 +18,11 @@
     settings = {
       animation = "dur_file";
       clock = "%c";
-      dur_file_path = "${../../Wallpapers/blackhole-smooth-240x67.dur}";
-      full_color = true;
-      #box_position_h = 0.5;
-      #box_position_v = 0.4;
+      lua_animation_file = "${../../Wallpapers/ElemCellAuto.lua}";
+      #dur_file_path = "${../../Wallpapers/blackhole-smooth-240x67.dur}";
+      #full_color = true;
+      box_position_h = 0.5;
+      box_position_v = 0.4;
     };
   };
   services.displayManager.defaultSession = "niri";
