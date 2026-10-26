@@ -16,8 +16,9 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "matrix";
+      animation = "lua";
       clock = "%c";
+      lua_animation_file = "../../Wallpapers/ElemCellAuto.lua";
     };
   };
   services.displayManager.defaultSession = "niri";
