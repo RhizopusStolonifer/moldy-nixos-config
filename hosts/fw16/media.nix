@@ -8,6 +8,7 @@
 {
   services.syncthing = {
     enable = true;
+    dataDir = "/home/myco";
     openDefaultPorts = true;
     guiAddress = "0.0.0.0:8384";
     user = "myco";
