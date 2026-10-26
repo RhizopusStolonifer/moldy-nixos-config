@@ -10,8 +10,8 @@
     ./configuration.nix
     ../../modules/system
     ./media.nix
-    inputs.disko.nixosModules.disko
-    ./disko.nix
+    #inputs.disko.nixosModules.disko
+    #./disko.nix
     inputs.nixos-hardware.nixosModules.framework-12-13th-gen-intel
   ];
 

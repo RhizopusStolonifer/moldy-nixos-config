@@ -28,7 +28,7 @@
                 mountpoint = "/";
                 mountOptions = [ "compress=zstd" ];
               };
-              "/hom" = {
+              "/home" = {
                 mountpoint = "/home";
                 mountOptions = [ "compress=zstd" ];
               };
