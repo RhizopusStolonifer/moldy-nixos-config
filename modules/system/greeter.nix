@@ -16,7 +16,7 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "dur_file";
+      animation = "lua";
       clock = "%c";
       lua_animation_file = "${../../Wallpapers/ElemCellAuto.lua}";
       #dur_file_path = "${../../Wallpapers/blackhole-smooth-240x67.dur}";
