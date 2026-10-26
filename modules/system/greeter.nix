@@ -18,7 +18,7 @@
     settings = {
       animation = "lua";
       clock = "%c";
-      lua_animation_file = "../../Wallpapers/ElemCellAuto.lua";
+      lua_animation_file = "/home/myco/moldy-nixos-config/Wallpapers/ElemCellAuto.lua";
     };
   };
   services.displayManager.defaultSession = "niri";
