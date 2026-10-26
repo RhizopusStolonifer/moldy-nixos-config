@@ -53,10 +53,10 @@
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
         eval "$(pay-respects zsh)"
-        ${lib.optionalString (host == "mycorrhiza") "bash ${./pokemon.sh}"}
+        ${lib.optionalString (host != "fw12") "bash ${./pokemon.sh}"}
       '')
       (lib.mkOrder 1500 ''
-        ${lib.optionalString (host != "mycorrhiza") "bindkey -v"}
+        ${lib.optionalString (host == "fw12") "bindkey -v"}
         switch() {
             if [ -z "$1" ]; then
                 echo "Error: Commit message required."
