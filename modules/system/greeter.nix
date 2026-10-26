@@ -16,11 +16,11 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "lua";
+      animation = "dur";
       clock = "%c";
-      lua_animation_file = "/home/myco/moldy-nixos-config/Wallpapers/ElemCellAuto.lua";
-      box_position_h = 0.5;
-      box_position_v = 0.4;
+      dur_animation_file = {"/home/myco/moldy-nixos-config/Wallpapers/blackhole-smooth-240x67.dur"};
+      #box_position_h = 0.5;
+      #box_position_v = 0.4;
     };
   };
   services.displayManager.defaultSession = "niri";
