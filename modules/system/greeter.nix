@@ -18,7 +18,7 @@
     settings = {
       animation = "dur";
       clock = "%c";
-      dur_animation_file = {"/home/myco/moldy-nixos-config/Wallpapers/blackhole-smooth-240x67.dur"};
+      dur_animation_file = "/home/myco/moldy-nixos-config/Wallpapers/blackhole-smooth-240x67.dur";
       #box_position_h = 0.5;
       #box_position_v = 0.4;
     };
