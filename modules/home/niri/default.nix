@@ -14,6 +14,8 @@
       ./binds-mycorrhiza.kdl
     else if host == "fw12" then
       ./binds-fw12.kdl
+    else if host == "fw16" then
+      ./binds-fw16.kdl
     else
       ./binds.kdl;
 }
