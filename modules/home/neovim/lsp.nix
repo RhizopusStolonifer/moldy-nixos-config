@@ -3,14 +3,14 @@
     plugins.lsp = {
       enable = true;
       servers = {
-        pyright.enable = true; # python
-        bashls.enable = true; # bash
-        lua_ls.enable = true; # lua
+        pyright.enable = true;
+        bashls.enable = true;
+        lua_ls.enable = true;
         marksman.enable = true; # markdown
-        texlab.enable = true; # latex
-        nixd.enable = true; # nix
+        texlab.enable = true;
+        nixd.enable = true;
         jsonls.enable = true; # vscode-langservers-extracted
-        yamlls.enable = true; # yaml-language-server
+        yamlls.enable = true;
       };
       keymaps = {
         lspBuf = {

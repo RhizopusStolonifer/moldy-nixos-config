@@ -10,7 +10,7 @@
 
   programs.nixvim = {
     enable = true;
-    defaultEditor = false;
+    defaultEditor = true;
     viAlias = false;
     vimAlias = false;
     nixpkgs.pkgs = pkgs;

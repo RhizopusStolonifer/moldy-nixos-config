@@ -1,5 +1,9 @@
 #+title: README
 
+* Temporarily removed
+- acpi
+- fluxer
+
 * Install
 
 ** Install NixOS
