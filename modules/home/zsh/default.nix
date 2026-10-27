@@ -93,7 +93,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    VISUAL = "emacs";
+    #VISUAL = "emacs";
     SSH_AUTH_SOCK = "/home/myco/.ssh/proton-pass-ssh-agent.sock";
   };
 
