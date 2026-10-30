@@ -109,6 +109,7 @@
     proton-pass
     moonlight
     rstudio
+    eden
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
