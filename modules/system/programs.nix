@@ -49,6 +49,7 @@
       libxshmfence
       libXcursor
       libXi
+      libXinerama
       libXrender
       libXtst
       libXScrnSaver
