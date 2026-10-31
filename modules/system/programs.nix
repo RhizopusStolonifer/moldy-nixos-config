@@ -53,6 +53,8 @@
       libXrender
       libXtst
       libXScrnSaver
+      zlib
+      freetype
     ];
   };
 
