@@ -55,6 +55,7 @@
       libXScrnSaver
       zlib
       freetype
+      icu
     ];
   };
 
