@@ -113,7 +113,6 @@
     moonlight
     rstudio
     eden
-    tkmm
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
