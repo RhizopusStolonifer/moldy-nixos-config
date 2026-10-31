@@ -56,6 +56,8 @@
       zlib
       freetype
       icu
+      libICE
+      libSM
     ];
   };
 
