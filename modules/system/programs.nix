@@ -116,7 +116,7 @@
     moonlight
     rstudio
     eden
-    ryubing
+    ruffle
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
