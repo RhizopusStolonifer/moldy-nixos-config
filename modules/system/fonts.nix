@@ -29,6 +29,8 @@
       kode-mono
       departure-mono
       inter
+      corefonts
+      liberation_ttf
     ];
   };
 }
