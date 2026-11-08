@@ -20,5 +20,6 @@
     ./secrets.nix
     ./virtualisation.nix
     ./greeter.nix
+    ./CPU.nix
   ];
 }
