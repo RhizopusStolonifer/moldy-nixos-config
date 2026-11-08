@@ -117,6 +117,7 @@
     rstudio
     eden
     ruffle
+    fahclient
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
