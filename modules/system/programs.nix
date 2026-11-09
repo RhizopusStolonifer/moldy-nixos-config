@@ -72,6 +72,8 @@
     wine-wayland
     python314Packages.beautifulsoup4 # for dms anime schedule widget
     brave
+    qutebrowser
+    ungoogled-chromium
     fzf
     fd
     librewolf
