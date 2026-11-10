@@ -58,7 +58,7 @@
       icu
       libICE
       libSM
-      gconf
+      Gconf
     ];
   };
 
