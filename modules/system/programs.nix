@@ -58,7 +58,8 @@
       icu
       libICE
       libSM
-      gnome2.Gconf
+      #gnome2.GConf
+      GConf
     ];
   };
 
