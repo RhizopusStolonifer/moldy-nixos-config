@@ -59,6 +59,9 @@
       libICE
       libSM
       dconf
+      nss
+      nspr
+      alsa-lib
     ];
   };
 
