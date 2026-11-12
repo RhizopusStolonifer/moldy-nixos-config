@@ -16,9 +16,9 @@ binds {
     Mod+N hotkey-overlay-title="Open Neovim" { spawn "ghostty" "-e" "nvim"; }
     Mod+S hotkey-overlay-title="Open Steam" { spawn "steam-labwc"; }
     Mod+L hotkey-overlay-title="Open Labwc" { spawn "labwc"; }
-    Alt+Space hotkey-overlay-title="Spotlight Bar" {
-        spawn "dms" "ipc" "call" "spotlight-bar" "toggle";
-    }
+    //Alt+Space hotkey-overlay-title="Spotlight Bar" {
+    //    spawn "dms" "ipc" "call" "spotlight-bar" "toggle";
+    //}
     Mod+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
