@@ -124,6 +124,7 @@
     eden
     ruffle
     fahclient
+    libuv
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
