@@ -128,6 +128,7 @@
     fahclient
     libuv
     libuvc
+    uv
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
