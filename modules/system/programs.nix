@@ -62,6 +62,8 @@
       nss
       nspr
       alsa-lib
+      libuv
+      libuvc
     ];
   };
 
@@ -125,6 +127,7 @@
     ruffle
     fahclient
     libuv
+    libuvc
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
