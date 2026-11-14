@@ -129,6 +129,7 @@
     libuv
     libuvc
     uv
+    beets
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
