@@ -78,7 +78,7 @@
     wine-wayland
     python314Packages.beautifulsoup4 # for dms anime schedule widget
     brave
-    qutebrowser
+    #qutebrowser   # still uses eMudhra stuff (4)
     ungoogled-chromium
     fzf
     fd
