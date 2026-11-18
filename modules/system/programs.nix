@@ -69,7 +69,7 @@
 
   environment.systemPackages = with pkgs; [
     smartmontools
-    #fluxer-canary
+    fluxer-canary
     transmission_4-gtk
     icu
     openssl
@@ -78,7 +78,7 @@
     wine-wayland
     python314Packages.beautifulsoup4 # for dms anime schedule widget
     brave
-    #qutebrowser   # still uses eMudhra stuff (4)
+    qutebrowser
     ungoogled-chromium
     fzf
     fd
