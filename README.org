@@ -3,6 +3,7 @@
 * Temporarily removed
 - acpi
 - qutebrowser
+- fluxer
 
 * Install
 

@@ -69,7 +69,7 @@
 
   environment.systemPackages = with pkgs; [
     smartmontools
-    fluxer-canary
+    #fluxer-canary  # doesn't work for some reason
     transmission_4-gtk
     icu
     openssl
