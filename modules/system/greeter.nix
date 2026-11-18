@@ -45,7 +45,6 @@
       enable = true;
     };
 
-    # Enable "Silent boot"
     consoleLogLevel = 3;
     kernelParams = [
       "quiet"
