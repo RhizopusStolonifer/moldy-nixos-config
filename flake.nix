@@ -46,9 +46,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    vicinae.url = "github:vicinaehq/vicinae";
-    vicinae-extensions.url = "github:vicinaehq/extensions";
-
     plover-flake.url = "github:opensteno/plover-flake";
 
     disko = {
