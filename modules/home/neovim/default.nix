@@ -17,5 +17,4 @@
   };
 
   stylix.targets.nixvim.plugin = "base16-nvim";
-  colorschemes.dracula.enable = true;
 }
