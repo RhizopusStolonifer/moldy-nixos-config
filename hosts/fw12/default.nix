@@ -34,7 +34,7 @@
     };
   };
 
-  powerManagement.cpuFreqGovernor = "performance";
+  #powerManagement.cpuFreqGovernor = "performance";
 
   boot = {
     #kernelModules = [ "acpi_call" ];
