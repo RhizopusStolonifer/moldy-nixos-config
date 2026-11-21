@@ -41,6 +41,30 @@
           end
         '';
       }
+      {
+        mode = "n";
+        key = "<leader>tf";
+        action = "<cmd>lua vim.g.disable_autoformat = not vim.g.disable_autoformat<CR>";
+        options.desc = "Toggle format on save";
+      }
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = "<cmd>Yazi<CR>";
+        options.desc = "Yazi";
+      }
+      {
+        mode = "n";
+        key = "<leader>xx";
+        action = "<cmd>Trouble diagnostics toggle<CR>";
+        options.desc = "Diagnostics list";
+      }
+      {
+        mode = "n";
+        key = "<leader>gg";
+        action = "<cmd>LazyGit<CR>";
+        options.desc = "Lazygit";
+      }
     ];
   };
 }

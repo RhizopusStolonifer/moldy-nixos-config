@@ -17,4 +17,8 @@
   };
 
   stylix.targets.nixvim.plugin = "base16-nvim";
+  stylix.targets.nixvim.transparentBackground = {
+    main = true;
+    signColumn = true;
+  };
 }

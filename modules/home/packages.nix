@@ -67,6 +67,7 @@
     yaml-language-server
     stylua
     lazygit
+    ruff
   ];
 
   programs = {
