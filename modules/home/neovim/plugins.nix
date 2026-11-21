@@ -77,7 +77,10 @@
     yazi.enable = true;
     lazygit.enable = true;
 
-    lsp.servers.r_language_server.enable = true;
+    lsp.servers.r_language_server = {
+      enable = true;
+      package = null;
+    };
     lsp.servers.ruff.enable = true;
   };
 }
