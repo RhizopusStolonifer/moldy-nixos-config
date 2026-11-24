@@ -139,6 +139,7 @@
         matplotlib
         adb-shell
         pyarrow
+        requests
       ]
     ))
 
