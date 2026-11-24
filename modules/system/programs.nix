@@ -138,6 +138,7 @@
         sympy
         matplotlib
         adb-shell
+        pyarrow
       ]
     ))
 
