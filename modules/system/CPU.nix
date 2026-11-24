@@ -1,4 +1,4 @@
-{ host, ... }:
+{ host, lib, ... }:
 {
   config = lib.mkIf (host == "mycorrhiza") {
     services.undervolt = {
