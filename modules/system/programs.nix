@@ -147,8 +147,6 @@
       packages = with rPackages; [
         tidyverse
         languageserver
-        arrow
-        duckdb
         dbplyr
       ];
     })
