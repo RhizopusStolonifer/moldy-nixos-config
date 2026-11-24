@@ -150,6 +150,15 @@
         dbplyr
       ];
     })
+    (rstudioWrapper.override {
+      packages = with rPackages; [
+        tidyverse
+        languageserver
+        arrow
+        duckdb
+        dbplyr
+      ];
+    })
   ];
 
   nixpkgs.overlays = [
