@@ -130,6 +130,7 @@
     libuvc
     uv
     beets
+    py7zr # dependency for something
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
