@@ -4,6 +4,7 @@
   python3Packages,
   fetchPypi,
   inputs,
+  ...
 }:
 let
   ufo-extractor = python3Packages.buildPythonPackage rec {
