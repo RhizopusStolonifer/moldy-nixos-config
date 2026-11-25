@@ -102,6 +102,8 @@ stdenv.mkDerivation {
     defcon
     ttfautohint-py
     foundrytools-cli
+    py7zr
+    fontmake
   ];
 
   buildPhase = ''
