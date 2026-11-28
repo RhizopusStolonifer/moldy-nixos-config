@@ -65,6 +65,7 @@
       libuv
       libuvc
       harfbuzz
+      vulkan-loader
     ];
   };
 
