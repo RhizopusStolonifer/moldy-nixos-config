@@ -134,6 +134,7 @@
     uv
     beets
     py7zr # dependency for something
+    strawberry
 
     (python3.withPackages (
       python-pkgs: with python-pkgs; [
