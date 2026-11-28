@@ -64,6 +64,7 @@
       alsa-lib
       libuv
       libuvc
+      harfbuzz
     ];
   };
 
