@@ -66,6 +66,7 @@
       libuvc
       harfbuzz
       vulkan-loader
+      gmp
     ];
   };
 
